@@ -1,0 +1,81 @@
+<div class="modal fade {{modals_prefix}}modal" id="{{modals_id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog {{modals_prefix}}dialog  {{modals_mod}}">
+		<div class="modal-body {{modals_prefix}}body  {{modals_mod}}" >
+			<button type="button" class="btn-site  {{modals_prefix}}close  modal-close" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
+			</button>
+			<div class="modal-content {{modals_prefix}}content">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/group.html" 
+					header_prefix="page-header__" 
+					header_mod="is--modals  is--enter"
+					header_level="h4" 
+					header="Войдите на сайт"
+					header_small_level="div"
+					header_small="Чтобы мы могли с Вами связаться, а также получить скидку <span class='is--pink'>3%</span> при заказе online"
+				]]	
+				<ul class="{{modals_prefix}}tabs-nav">
+					<li class="{{modals_prefix}}tabs-nav-item  active">
+						<a href="#tab-enter" data-toggle="tab" class="{{modals_prefix}}tabs-nav-link">Войти</a> 
+					</li>
+					<li class="{{modals_prefix}}tabs-nav-item">
+						<a href="#tab-registr" data-toggle="tab" class="{{modals_prefix}}tabs-nav-link">Регистрация</a>
+					</li>
+					<li class="{{modals_prefix}}tabs-nav-item">
+						<a href="#tab-pass" data-toggle="tab" class="{{modals_prefix}}tabs-nav-link">Забыли пароль?</a>
+					</li>
+				</ul> 
+				<div class="{{modals_prefix}}tab-content">
+					<div class="{{modals_prefix}}tab-pan active" id="tab-enter">
+						[[azbntple 
+							tpl="/src/block/site/default/form/email-pass.html" 
+							form_prefix="form__"
+							form_id="feo"
+							form_mod="is--sm" 
+							form_color="  "
+							form_btn_name="Войти"
+						]]	
+						[[azbntple 
+							tpl="/src/block/site/default/social/panel-enter.html" 
+							block_prefix="social__"
+							block_mod="is--enter"
+							block_heading="Войти с помощью соц. сетей"
+						]]	
+					</div>
+					<div class="{{modals_prefix}}tab-pan" id="tab-registr">
+						[[azbntple 
+							tpl="/src/block/site/default/form/fio-tel-email-pass.html" 
+							form_prefix="form__"
+							form_id="fro"
+							form_mod="is--sm" 
+							form_color="  "
+							form_btn_name="Зарегистрироваться"
+						]]	
+						[[azbntple 
+							tpl="/src/block/site/default/social/panel-enter.html" 
+							block_prefix="social__"
+							block_mod="is--enter"
+							block_heading="Для упрощения регистрации вы можете связать свой аккаунт в соц.сети с личным кабинетом"
+						]]
+					</div>
+					<div class="{{modals_prefix}}tab-pan" id="tab-pass">
+						[[azbntple 
+							tpl="/src/block/site/default/form/email.html" 
+							form_prefix="form__"
+							form_id="frpo"
+							form_mod="is--sm" 
+							form_color="  "
+							form_btn_name="Восстановить пароль"
+						]]	
+					</div>
+				</div>
+			</div> 	 
+			[[azbntple 
+				tpl="/src/block/site/default/bg/card-plane.html" 
+				block_prefix="bg-plane__"
+				block_mod="is--enter  is--speed-100"	
+				block_bg="bg-plane-enter-blue.png"		
+			]]
+		</div> 
+	</div>
+</div>

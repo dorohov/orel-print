@@ -1,0 +1,141 @@
+<nav class="{{class}} navbar  {{navbar_mod}} scroll-navbar">
+	<div class="{{navbar_prefix}}inner">
+		<div class="container {{navbar_prefix}}container">
+			<div class="row {{navbar_prefix}}row">
+				<div class="cols {{navbar_prefix}}cols  is--header"> 				
+					<div class="{{navbar_prefix}}header">
+						<div class="row {{navbar_prefix}}row-header ">
+							<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+								<div class="{{navbar_prefix}}hamburger">
+									<button class="{{navbar_prefix}}hamburger-btn hamburger__item" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+										<span class="hamburger__line  is--left"></span>
+										<span class="hamburger__line  is--center"></span>
+										<span class="hamburger__line  is--right"></span>
+									</button>
+								</div>
+							</div>
+							<div class="cols {{navbar_prefix}}cols-header  is--brand">
+								<a class="{{navbar_prefix}}brand" href="/">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</a>
+							</div>
+							<div class="cols {{navbar_prefix}}cols-header  is--tel">
+								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cols {{navbar_prefix}}cols  is--collapse">
+					<div class="{{navbar_prefix}}collapse" >
+						<div class="{{navbar_prefix}}collapse-inner">
+							<div class="row {{navbar_prefix}}collapse-row">
+								<div class="cols {{navbar_prefix}}collapse-cols  is--soc" >
+									[[azbntple 
+										tpl="/src/block/site/default/social/panel.html"
+										block_prefix="social__" 
+									]]
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-cols  is--nav">
+									<div class="row {{navbar_prefix}}nav-row  is--wrap">
+										<div class="cols {{navbar_prefix}}nav-cols cols  is--sm">
+											<ul class="{{navbar_prefix}}nav  is--sm">
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Портфолио"
+													navbar_link="/portfolio.html"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 										
+													tpl="/src/block/site/default/navbar/item-drop-print.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Способы печати"
+													navbar_link="/print-type.html"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Тех. требования"
+													navbar_link="/demands.html"
+													navbar_mod="  " 
+												]]
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Корп. клиентам"
+													navbar_link="/clients.html"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Блог"
+													navbar_link="/blog.html"
+													navbar_mod="  " 
+												]]
+											</ul>
+										</div>
+										<div class="cols {{navbar_prefix}}nav-cols cols">
+											
+											<ul class="{{navbar_prefix}}nav">
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item-drop-products.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Продукция"
+													navbar_link="/products.html"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item-drop-services.html"  
+													navbar_prefix="navbar__" 
+													navbar_name="Услуги" 
+													navbar_link="/services.html"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Прайс-лист"
+													navbar_link="/price-list.html"
+													navbar_mod="  " 
+												]]
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Акции"
+													navbar_link="/action.html"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Контакты"
+													navbar_link="/contacts.html" 
+													navbar_mod="  "
+												]]	   
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-cols  is--contacts" >
+									<div class="{{navbar_prefix}}tel-block">
+										<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel">{{contacts.phone}}</a>
+									</div>
+									<div class="{{navbar_prefix}}tel-block">
+										<a href="mailto:{{contacts.email}}" class="{{navbar_prefix}}email">{{contacts.email_name}}</a>
+									</div>
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-cols  is--btn" >
+									<button type="button" data-toggle="modal" data-target="#modal-enter" class="{{navbar_prefix}}btn-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="btn-login" ]]</button>
+									<a href="/basket.html" class="{{navbar_prefix}}btn-icon">
+										[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="btn-basket" ]]
+										<span class="{{navbar_prefix}}btn-icon-label">5</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,30 @@
+{
+	"contacts":{
+		"name":"ООО «Орион-Принт»",
+		"domain":"orel-print.ru",
+		"domain_link":"http://orel-print.ru/",
+		"agreement_page":"agreement",
+		"copyright":"Все права защищены",
+		"email":"mail@orion-print.org",
+		"email_name":"<span>mail</span>@orion-print.org",
+		"phone":"+7 (4862) <span>44-51-15</span>",  
+		"phone_tel":"+74862445115",  
+		"address":"<span>г.&nbsp;Орёл,</span> бульвар&nbsp;Победы&nbsp;6,этаж&nbsp;4 оф.&nbsp;52", 
+		"inn":""
+	},
+	"soc":{
+		"vk":"https://vk.com/orion_print",
+		"fb":"https://www.facebook.com/Orionprintorel/",
+		"inst":"https://www.instagram.com/orion_print/"
+	},
+	"url-path-css":"/wp-content/themes/azbnbasetheme/css",
+	"url-path-css":"/css",
+	"url-path-img":"/wp-content/themes/azbnbasetheme/img",
+	"url-path-img":"/img",
+	"url-path-js":"/wp-content/themes/azbnbasetheme/js",
+	"url-path-js":"/js",
+	"url-path-plugins":"/wp-content/themes/azbnbasetheme/plugins",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/wp-content/themes/azbnbasetheme/favicon",
+	"url-path-favicon":"/favicon"
+}

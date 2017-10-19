@@ -1,0 +1,78 @@
+//===== social =====//
+@soc_size: 					30px;
+@soc_border_radius: 		50%;
+@soc_border: 				none;
+@soc_bg: 					fadeout(@yellow, 30%);
+@soc_bg_hover: 				@yellow;
+@soc_color: 				@b-color-h;
+@soc_color_hover: 			@white;
+@soc_color_contacts:		@b-color;
+@soc_gutter:				2.5px; 
+.social__{
+	&block{}
+	&row{
+		align-items: center;
+		margin-left: -(@soc_gutter);
+		margin-right: -(@soc_gutter);
+		&.is--enter{
+			margin-left: -(@soc_gutter) - 2.5;
+			margin-right: -(@soc_gutter) - 2.5;
+		}		
+	}
+	&cols{
+		padding-left: @soc_gutter;
+		padding-right: @soc_gutter;
+		&.is--enter{
+			padding-left: @soc_gutter + 2.5;
+			padding-right: @soc_gutter + 2.5;
+		}
+	}
+	&heading{
+		&.is--enter{
+			font-size: @b-fs - 4;
+			line-height: @b-lh - 6;
+		}		
+	}
+	&item{
+		display: block;
+		width: @soc_size;
+		height: @soc_size;
+		color: @soc_color;
+		background-color: @soc_bg;
+		border-radius: @soc_border_radius;
+		padding: 8px;
+		svg{display: block;}
+		&.is--vk{
+			&:hover{
+				background-color: @color-vk;
+				color: @white;				
+			}
+		}
+		&.is--fb{
+			padding: 6px;
+			&:hover{
+				background-color: @color-fb;
+				color: @white;				
+			}
+		}
+		&.is--inst{
+			&:hover{
+				background-color: @color-inst;
+				color: @white;				
+			}
+		}
+		&.is--ok{
+			&:hover{
+				background-color: @color-ok;
+				color: @white;				
+			}
+		}
+		&.is--enter{
+			@media @media-notsmart {
+				width: @soc_size + 16;
+				height: @soc_size + 16;
+				padding: 12px;
+			}			
+		}
+	}
+}

@@ -1,0 +1,36 @@
+<div class="{{form_prefix}}panel  {{form_mod}}"  style="background-image: url({{url-path-img}}/bg/{{form_bg}})">
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card-plane.html" 
+		block_prefix="bg-plane__"
+		block_mod="is--form-top  is--speed-10"	
+		block_bg="bg-plane-form-green.png"		
+	]]	
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card-plane.html" 
+		block_prefix="bg-plane__"
+		block_mod="is--form-bottom  is--speed-25"	
+		block_bg="bg-plane-form-yellow.png"		
+	]]
+	<div class="container {{form_prefix}}container  {{form_mod}}">
+		<div class="{{form_prefix}}panel-inner  {{form_mod}}">
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/group.html" 
+				header_prefix="page-header__" 
+				header_mod="is--form-panel  is--center"
+				header_level="h3" 
+				header="{{form_heading}}"
+				header_small_level="div"
+				header_small="{{form_heading_small}}"
+			]]
+			[[azbntple 
+				tpl="/src/block/site/default/form/fio-comp-email-pass.html"
+				form_prefix="form__"
+				form_id="{{form_id}}"
+				form_mod="{{form_mod_form}}" 
+				form_color="{{form_color}}"
+				form_btn_mod="{{form_btn_mod}}"
+				form_btn_name="{{form_btn_name}}"
+			]]	
+		</div> 
+	</div> 
+</div> 

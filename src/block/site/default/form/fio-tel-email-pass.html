@@ -1,0 +1,45 @@
+<form action="#" class="{{form_prefix}}block  {{form_mod}}  is--enter"  > 
+	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+	<div class="{{form_prefix}}inner  {{form_mod}}"  >
+		<div class="row {{form_prefix}}row  is--wrap">
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--name">
+				<div class="{{form_prefix}}item">
+					<input type="text" class="{{form_prefix}}control form-control validate[required]  {{form_mod}}  {{form_color}}" id="{{form_id}}[fio]" name="{{form_id}}[fio]" placeholder="Ваше имя:">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--email">
+				<div class="{{form_prefix}}item">
+					<input type="email" class="{{form_prefix}}control form-control validate[required,custom[email]]  {{form_mod}}  {{form_color}}" id="{{form_id}}[email]" name="{{form_id}}[email]" placeholder="E-mail:">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--tel">
+				<div class="{{form_prefix}}item">
+					<input type="tel" class="{{form_prefix}}control form-control validate[required,custom[phone]]  {{form_mod}}  {{form_color}}" id="{{form_id}}[tel]" name="{{form_id}}[tel]" placeholder="Телефон:">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--pass">
+				<div class="{{form_prefix}}item">
+					<input type="password" class="{{form_prefix}}control form-control validate[required]  {{form_color}}  {{form_mod}}" id="{{form_id}}[pass]" name="{{form_id}}[Пароль]" placeholder="Пароль:">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--agreement">
+				<div class="rect-switch {{form_prefix}}item  {{form_mod}}">
+	                <input class="rect-switch__input validate[required]" id="{{form_id}}[processing]" name="{{form_id}}[processing]" type="checkbox" checked />
+	                <label for="{{form_id}}[processing]" class="rect-switch__label"></label> 
+					<label for="{{form_id}}[processing]" class="rect-switch__text"> 
+						Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+					</label>
+	            </div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="is--form"
+					button_type="submit"
+					button_name="{{form_btn_name}}" 
+				]]
+			</div>
+		</div>	
+	</div> 
+</form> 
