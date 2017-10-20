@@ -14,32 +14,18 @@ if(is_category()) {
 <meta name="keywords" content="">
 <meta name="description" content="">
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta HTTP-EQUIV="Cache-Control" content="no-cache" />
 
-<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
-<link type="image/x-icon" href="/favicon.ico" rel="icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="<?=$this->path('favicon');?>/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?=$this->path('favicon');?>/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?=$this->path('favicon');?>/favicon-16x16.png">
+<link rel="manifest" href="<?=$this->path('favicon');?>/manifest.json">
+<link rel="mask-icon" href="<?=$this->path('favicon');?>/safari-pinned-tab.svg" color="#132c81">
+<link rel="shortcut icon" href="<?=$this->path('favicon');?>/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="orel-print.ru">
+<meta name="application-name" content="orel-print.ru">
+<meta name="msapplication-config" content="<?=$this->path('favicon');?>/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"> 
 
-<link href="<?php echo $this->path('css');?>/bootstrap/bootstrap.css" rel="stylesheet">
-<link href="<?php echo $this->path('css');?>/site.css?update=<?=date("Ymd");?>" rel="stylesheet">
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-
-<script src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
-<script>
-if(typeof window.jQuery === 'undefined') {
-	document.write(
-	unescape("%3Cscript src='<?php echo $this->path('js');?>/jquery.min.js' type='text/javascript'%3E%3C/script%3E")
-	);
-}
-</script>
-<script src="<?php echo $this->path('js');?>/bootstrap.min.js" ></script>
-<script src="<?php echo $this->path('js');?>/storage.js" ></script>
-
-<script src="<?php echo $this->path('js');?>/document-ready.js" ></script>
+<link href="<?php echo $this->path('css');?>/site.css" rel="stylesheet">

@@ -17,6 +17,7 @@ $posts = $this->getItems(array(
 
 ));
 $heading_small = get_field('page_heading_small', $id);
+$heading_color = get_field('heading_color', $id);
 ?>
 <div class="content-block blog-page__content-block  is--hidden" role="main">	
 	<div class="page-header-panel__block  <?=$heading_color;?>">

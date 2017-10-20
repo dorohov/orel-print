@@ -1,79 +1,64 @@
-<?
-	$block_prefix = "footer__";
-	$vk = getContact('vk');
-	$fb = getContact('fb');
-	$inst = getContact('inst');
-	$copyright = getContact('copyright');
-?>
-			<footer class="<?=$block_prefix;?>block">	
-				<div class="container <?=$block_prefix;?>container">
-					<div class="row <?=$block_prefix;?>row">					
-						<div class="cols <?=$block_prefix;?>cols  is--logotip">
-							<a href="/" class="<?=$block_prefix;?>logotip">
-								<img src="<?=$this->path('img');?>/default/logotip-footer.png" alt="">
-							</a>			
-						</div>
-						<div class="cols <?=$block_prefix;?>cols  is--copyright">			
-							<?=$copyright;?>
-						</div>
-						<div class="cols <?=$block_prefix;?>cols  is--soc">
-							<div class="social__block">
-								<div class="row social__row"> 
-									<? if ($vk != ""){?>
-									<div class="cols social__cols">
-										<a href="<?=$vk;?>" target="_blank" class="social__item  is--vk">
-											<div class="social__icon">
-												<svg class="icon-svg icon-vk" role="img">
-													<use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#vk"></use>
-												</svg>
-											</div>
-										</a>
-									</div>
-									<?}?>
-									<? if ($fb != ""){?>
-									<div class="cols social__cols">
-										<a href="<?=$fb;?>" target="_blank" class="social__item  is--fb">
-											<div class="social__icon">
-												<svg class="icon-svg icon-fb" role="img">
-													<use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#fb"></use>
-												</svg>
-											</div>
-										</a>
-									</div>
-									<?}?>
-									<? if ($inst != ""){?>
-									<div class="cols social__cols">
-										<a href="<?=$inst;?>" target="_blank" class="social__item  is--inst">
-											<div class="social__icon">
-												<svg class="icon-svg icon-inst" role="img">
-													<use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#inst"></use>
-												</svg>
-											</div>
-										</a>
-									</div>
-									<?}?>
-								</div>
-							</div>  
-						</div>
-						<div class="cols <?=$block_prefix;?>cols  is--dorohovdesign">
-							<div class="row <?=$block_prefix;?>dorohovdesign-row"> 
-								<div class="cols <?=$block_prefix;?>dorohovdesign-cols  is--text">
-									<div class="<?=$block_prefix;?>dorohovdesign-text">Разработка сайта</div>
-								</div>
-								<div class="cols <?=$block_prefix;?>dorohovdesign-cols  is--logotip">
-									<a href="http://dorohovdesign.ru/" target="_blank" class="<?=$block_prefix;?>dorohovdesign-logotip">
-										<svg class="icon-svg icon-dorohovdesign" role="img"><use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#dorohovdesign"></use></svg>
-									</a>
-								</div>
-							</div>				 
-						</div>	
+		<?
+			$block_prefix = "footer__";
+			$email = getContact('email');
+			$email_arr = explode('@', $email);
+			$phone = getContact('phone');	
+			$phone_num = phone(getContact('phone'));
+			$adds = getContact('adds');
+			$old_site = getContact('old_site');
+		?>
+		<footer class="<?=$block_prefix;?>block">	
+			<div class="container <?=$block_prefix;?>container">
+				<div class="row <?=$block_prefix;?>row">
+					<div class="cols <?=$block_prefix;?>cols  is--logotip">
+						<a href="/" class="<?=$block_prefix;?>logotip">
+							<svg class="icon-svg icon-logotip" role="img"><use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#logotip"></use></svg>
+						</a>			
 					</div>
+					<?if($old_site != ""){?>
+					<div class="cols <?=$block_prefix;?>cols  is--btn">
+						<a href="<?=$old_site;?>" class="btn__item is--xs-400  is--invers"><span>Старая версия сайта</span></a>
+					</div>
+					<?}?>
+					<div class="cols <?=$block_prefix;?>cols  is--contacts">
+						<div class="<?=$block_prefix;?>contacts-row row">					
+							<?if ($phone != ""){?>
+							<div class="<?=$block_prefix;?>contacts-cols cols">
+								<a href="tel:+<?=$phone_num?>" class="<?=$block_prefix;?>contacts-item"><?=$phone;?></a>
+							</div>
+							<?}?>
+							<?if ($email != ""){?>
+							<div class="<?=$block_prefix;?>contacts-cols cols">
+								<a href="mailto:<?=$email;?>" class="<?=$block_prefix;?>contacts-item"><span><?=$email_arr[0];?></span>@<?=$email_arr[1];?></a>
+							</div>
+							<?}?>
+						</div>
+					</div>
+					<?if ($adds != ""){?>
+					<div class="cols <?=$block_prefix;?>cols  is--address">
+						<div class="<?=$block_prefix;?>contacts-item  is--address">
+							<?=$adds;?>
+						</div>
+					</div>
+					<?}?>
+					<div class="cols <?=$block_prefix;?>cols  is--dorohovdesign">
+						<div class="row <?=$block_prefix;?>dorohovdesign-row"> 
+							<div class="cols <?=$block_prefix;?>dorohovdesign-cols  is--text">
+								<div class="<?=$block_prefix;?>dorohovdesign-text">Разработка сайта</div>
+							</div>
+							<div class="cols <?=$block_prefix;?>dorohovdesign-cols  is--logotip">
+								<a href="http://dorohovdesign.ru/" target="_blank" class="<?=$block_prefix;?>dorohovdesign-logotip">
+									<svg class="icon-svg icon-dorohovdesign" role="img"><use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#dorohovdesign"></use></svg>
+								</a>
+							</div>
+						</div>				 
+					</div>	
 				</div>
-			</footer>
-		</div>	
+			</div>
+		</footer>	
 		<?
 			//modals
-			$video = get_field('video', 1);
+			/*$video = get_field('video', 1);
 			if ($video != ""){
 				$this->tpl(
 					'_/modals/video', 
@@ -83,14 +68,15 @@
 						"block_url" => $video
 					)
 				);
-			};
+			};*/
 			$this->tpl(
 				'_/modals/enter', 
 				array(
 					"block_prefix" => "modal-base__",
+					"block_mod" => "is--enter",
 					"block_modal_id" => "modal-enter",
-					"block_heading" => "Регистрация",
-					"block_note" => "",
+					"block_heading" => "Войдите на сайт",
+					"block_note" => "Чтобы мы могли с Вами связаться, а также получить скидку <span class='is--pink'>3%</span> при заказе online",
 				)
 			);
 		?>
@@ -106,14 +92,12 @@
 		<script src="<?=$this->path('js');?>/svg4everybody.min.js" ></script>
 		<script>svg4everybody();</script> 
 		<?
-			//script
-			$this->tpl('_/script/validationEngine');
-
 			if($this->post['id'] == 1) {
-				$this->tpl('_/script/response');
+				$this->tpl('_/script/2gisMap');
+				$this->tpl('_/script/fancybox');
 			}
 			if($this->post['id'] == 2) {
-				$this->tpl('_/script/googleMap');
+				$this->tpl('_/script/2gisMap');
 			}
 			if(is_single()) {
 				$this->tpl('_/script/fancybox');

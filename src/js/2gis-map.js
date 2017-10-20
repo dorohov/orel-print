@@ -3,26 +3,18 @@ if(document.getElementById('2gis-map')) {
 	var mapCoord = [52.974126, 36.058124];
 	var mapZoom = 18;
 	var placeholderCoord = [52.974239, 36.058958];
-	var iconUrl = '/img/default/map-placeholder.png';
-	var iconRetinaUrl = '/img/default/map-placeholder.png';
+	var iconUrl = '/wp-content/themes/azbn7theme/img/default/map-placeholder.png';
+	var iconRetinaUrl = '/wp-content/themes/azbn7theme/img/default/map-placeholder.png';
 	var iconSize = [130, 140];
 	var iconAnchor = [64, 130];	
 	if($(document).width() < 768) {
 		var mapZoom = 16;
 		var mapCoord = [52.9744, 36.059];
-		var iconUrl = '/img/default/map-placeholder-xs.png';
-		var iconRetinaUrl = '/img/default/map-placeholder-xs.png';
+		var iconUrl = '/wp-content/themes/azbn7theme/img/default/map-placeholder-xs.png';
+		var iconRetinaUrl = '/wp-content/themes/azbn7theme/img/default/map-placeholder-xs.png';
 		var iconSize = [74, 80];
 		var iconAnchor = [36, 74];	 
 	}
-	/*if(screenJS.pc()){
-		var mapZoom = 18;
-		var mapCoord = [52.974126, 36.058124];
-		var iconUrl = '/img/default/map-placeholder.png'; 
-		var iconRetinaUrl = '/img/default/map-placeholder.png';
-		var iconSize = [130, 140];
-		var iconAnchor = [64, 130];	
-	}*/
 	DG.then(function () {
 		map = DG.map('2gis-map', {
 			center: mapCoord,

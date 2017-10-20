@@ -17,9 +17,13 @@
 		data-azbn7__mdl__api='{"request_method":"POST","access_as":"profile","key":""}'
 		>
 		<?
-			$this->tpl('_/navbar');
+		$this->tpl(
+			'_/navbar', 
+			array(
+				"block_prefix"=>"navbar__",
+			)
+		);
 		?>
-		<div class="site-wrap">
 
 		<?/*
 		$posts = $this->getItems(array(

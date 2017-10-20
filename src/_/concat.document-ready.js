@@ -4,5 +4,6 @@ $(".bg-plane__bg-inner.is--speed-5").parallax({xparallax:"5px",yparallax:"5px"})
 var url=window.location.href;$('.navbar__nav a[href="'+url+'"]').parent().addClass("is--active"),$('.navbar__nav-dropdown-menu a[href="'+url+'"]').parent().addClass("is--active");
 $(".form__control[type='tel']").mask("+7 (999) 999-99-99",{placeholder:"+7 (___) ___-__-__"}),$(".form__control.is--kpp").mask("9999 99 999",{placeholder:"NNNN PP XXX"}),$(".form__control.is--inn").mask("9999999999",{placeholder:"XXXXXXXXXX"}),$(".form__control.is--ogrn").mask("9 99 99 99 99999 9",{placeholder:"С ГГ КК НН ХХХХХ Ч"}),$(".form__block").validationEngine("attach",{promptPosition:"bottomLeft",scrollOffset:200});
 $("img").addClass("img-responsive");
-var url=window.location.href;$('.cabinet-navbar__nav a[href="'+url+'"]').parent().addClass("is--active");
+var url=window.location.href;$('.navbar__nav a[href="'+url+'"]').parent().addClass("is--active");
+var url=window.location.href;$('.portfolio-navbar__nav a[href="'+url+'"]').parent().addClass("is--active");
 $(".text__block table").addClass("table table-bordered"),$(".text__block ol").addClass("is--counts"),$(".text__block ul").addClass("is--styled"),$(".text__block .table.table-bordered").wrap('<div class="table-responsive"></div>');
