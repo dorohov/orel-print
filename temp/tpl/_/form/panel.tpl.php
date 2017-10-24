@@ -28,6 +28,8 @@
 			$this->tpl(
 				'_/form/'.$param["block_tpl"], 
 				array(
+					"block_form_heading" => $param["block_heading"],
+					"block_form_page" => $param["block_form_heading"],
 					"block_form_prefix" => $param["block_form_prefix"],
 					"block_form_mod" => $param["block_form_mod"],
 					"block_form_color" => $param["block_form_color"],

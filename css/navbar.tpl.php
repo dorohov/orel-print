@@ -124,82 +124,6 @@
 										</div>
 										<div class="cols <?=$param["block_prefix"];?>nav-cols cols">
 											<ul class="<?=$param["block_prefix"];?>nav">
-												<li class="<?=$param["block_prefix"];?>nav-item  dropdown">
-													<a href="#" class="dropdown-toggle <?=$param["block_prefix"];?>nav-link" data-toggle="dropdown">Продукция</a>
-													<div class="<?=$param["block_prefix"];?>nav-dropdown dropdown-menu">
-														<div class="container <?=$param["block_prefix"];?>nav-dropdown-container">
-															<div class="<?=$param["block_prefix"];?>nav-dropdown-row  row  is--gutter  is--wrap">
-																<?
-																$menu_items_bottom = $this->getMenu(23);
-																
-																if(count($menu_items_bottom)) {
-																	
-																	$__menu_array = array(
-																		'items' => array(),
-																		'structure' => array(),
-																	);
-																	
-																	foreach($menu_items_bottom as $item) {
-																		$__menu_array['items'][$item->ID] = $item;
-																		$__menu_array['structure'][$item->menu_item_parent][] = &$__menu_array['items'][$item->ID];
-																	}
-																	
-																	if(count($__menu_array['structure'][0])) {
-																		foreach($__menu_array['structure'][0] as $item_sub0) {
-																			
-																			$item_class = '';
-																			
-																			if($item_sub0->object_id == $this->post['id']){
-																				$item_class = $item_class . ' is--active ';
-																			}
-																			
-																			if(count($__menu_array['structure'][$item_sub0->ID])) {
-																			
-																			?>
-																			
-																			<div class="<?=$param["block_prefix"];?>nav-dropdown-cols  cols  is--cols-screen-2">
-																					<?
-																						foreach($__menu_array['structure'][$item_sub0->ID] as $item_sub1) {
-																					?>
-																					<ul class="<?=$param["block_prefix"];?>nav-dropdown-menu">			
-																							<li class="navbar__nav-dropdown-item  is--heading">
-																								<a href="<?=$item_sub1->url;?>" class="navbar__nav-dropdown-link  is--heading"><?=$item_sub1->title;?></a>
-																							</li>
-																							<?
-																								foreach($__menu_array['structure'][$item_sub1->ID] as $item_sub2) {
-																							?>
-																							<li class="navbar__nav-dropdown-item  is--link">
-																								<a href="<?=$item_sub2->url;?>" class="navbar__nav-dropdown-link  is--link"><?=$item_sub2->title;?></a>
-																							</li>
-																							<?
-																								}
-																							?>
-																					</ul>
-																					<?
-																						}
-																					?>
-																			</div>
-																			
-																			<?
-																			
-																			} /*else {
-																				
-																				?>
-																				
-																				<!--<li class="<?=$param["block_prefix"];?>nav-item <?=$item_class;?> ">
-																					<a href="<?=$item_sub0->url;?>" class="<?=$param["block_prefix"];?>nav-link"><?=$item_sub0->title;?></a>
-																				</li>-->
-																				
-																				<?
-																				
-																			}*/
-																			
-																		}
-																	}
-																}
-															?>
-														</div>
-												</li>
 												<?
 													$menu_items_bottom = $this->getMenu(3);
 													
@@ -302,3 +226,9 @@
 		</div>
 	</div>
 </nav>
+
+<?
+//__theme_ed($menu_items_bottom);
+?>
+
+<?//var_dump($menu_items_bottom);?>

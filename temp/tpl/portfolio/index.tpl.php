@@ -26,14 +26,11 @@ $heading_color = get_field('heading_color', $id);
 					<li class="breadcrumb__list-item">
 						<a href="/" class="breadcrumb__list-link">Главная</a>
 					</li>
-					<li class="breadcrumb__list-item">
-						<a href="<?=l(6);?>" class="breadcrumb__list-link"><?=t(6);?></a>
-					</li>
-					<li class="breadcrumb__list-item is--active"><?=$this->entity->name;?></li>
+					<li class="breadcrumb__list-item is--active"><?=t($id);?></li>
 				</ul>
 			</div>	
 			<div class="page-header__block  is--heading  is--blue  is--panel">
-				<h1 class="page-header__heading  is--heading  is--blue  is--panel"><span><?=$this->entity->name;?></span></h1>	
+				<h1 class="page-header__heading  is--heading  is--blue  is--panel"><span><?=t($id);?></span></h1>	
 				<?if ($heading_small != ""){?>
 				<h3 class="page-header__heading-small  is--heading  is--blue  is--panel"><?=$heading_small;?></h3>		
 				<?}?>
@@ -66,11 +63,10 @@ $heading_color = get_field('heading_color', $id);
 				<div class="portfolio-panel__cols cols  is--cols-screen-9  is--cols-sm-12">
 					<div class="portfolio-panel__inner-row row  is--gutter  is--wrap">
 						<?
-						foreach($param['posts'] as $p) {	
-							//$projects->the_post();
+						while($projects->have_posts()) {
+							$projects->the_post();
 							$id = get_the_ID();
 							$link = l($id);
-							$link = l($p->ID);
 							$title = t($id);
 							$preview = $this->Imgs->postImg($p->ID, '385x265');
 							$preview_full = $this->Imgs->postImg($p->ID, '1280x880');
@@ -78,7 +74,7 @@ $heading_color = get_field('heading_color', $id);
 						<div class="portfolio-panel__inner-cols cols  is--cols-screen-4  is--cols-sm-4">
 							<div class="portfolio-card__item  block-hover__block">
 								<a href="<?=$preview_full;?>" data-fancybox="portfolio-gallery" class="portfolio-card__preview">
-									<img src="<?=$preview;?>" alt="">	
+									<img src="<?=$preview;?>" alt="<?=$title;?>" class="img-responsive">	
 									<div class="block-hover__item">
 										<div class="block-hover__icon">
 											<div class="block-hover__icon-inner">
@@ -91,6 +87,7 @@ $heading_color = get_field('heading_color', $id);
 						</div>
 						<?
 						}
+						wp_reset_postdata();
 						?>	
 						<div class="portfolio-panel__inner-cols cols  is--cols-screen-4  is--cols-sm-4  is--btn">
 							<div class="portfolio-card__item  is--link-icon">

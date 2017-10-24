@@ -58,27 +58,59 @@
 		</footer>	
 		<?
 			//modals
-			/*$video = get_field('video', 1);
-			if ($video != ""){
-				$this->tpl(
-					'_/modals/video', 
-					array(
-						"block_prefix" => "modal-video__",
-						"block_modal_id" => "modal-video",
-						"block_url" => $video
-					)
-				);
-			};*/
+
+			$modal_id = 522;
+			$modal_heading = get_field('modal_heading', $modal_id);
+			$modal_heading_small = get_field('modal_heading_small', $modal_id);
+			$modal_btn = get_field('modal_btn', $modal_id);
+			$this->tpl(
+				'_/modals/message', 
+				array(
+					"block_prefix" => "modal-base__",
+					"block_mod" => "is--enter",
+					"block_modal_id" => "modal-message",
+					"block_heading" => $modal_heading,
+					"block_note" => $modal_heading_small,
+					"block_btn_name" => $modal_btn,
+				)
+			);
+
+			$modal_id = 305;
+			$modal_heading = get_field('modal_heading', $modal_id);
+			$modal_heading_small = get_field('modal_heading_small', $modal_id);
+			$modal_btn = get_field('modal_btn', $modal_id);
 			$this->tpl(
 				'_/modals/enter', 
 				array(
 					"block_prefix" => "modal-base__",
 					"block_mod" => "is--enter",
 					"block_modal_id" => "modal-enter",
-					"block_heading" => "Войдите на сайт",
-					"block_note" => "Чтобы мы могли с Вами связаться, а также получить скидку <span class='is--pink'>3%</span> при заказе online",
+					"block_heading" => $modal_heading,
+					"block_note" => $modal_heading_small,
 				)
 			);
+
+			if(get_post_type() == "ourproduct" ) {
+				$modal_id = 303;
+				$modal_heading = get_field('modal_heading', $modal_id);
+				$modal_heading_small = get_field('modal_heading_small', $modal_id);
+				$modal_btn = get_field('modal_btn', $modal_id);
+				$this->tpl(
+					'_/modals/modal', 
+					array(
+						"block_prefix" => "modal-base__",
+						"block_tpl" => "buy",
+						"block_mod" => "is--enter",
+						"block_modal_id" => "modal-buy",
+						"block_heading" => $modal_heading,
+						"block_note" => $modal_heading_small,
+						"block_form_id" => "fbm",
+						"block_form_prefix" => "form__",
+						"block_form_mod" => "is--sm",
+						"block_btn_name" => $modal_btn,
+					)
+				);
+			}
 		?>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -91,6 +123,7 @@
 		<script src="<?=$this->path('js');?>/bootstrap.min.js" ></script>
 		<script src="<?=$this->path('js');?>/svg4everybody.min.js" ></script>
 		<script>svg4everybody();</script> 
+		<script src="<?=$this->path('js');?>/azbn7__api__common.js" ></script>
 		<?
 			if($this->post['id'] == 1) {
 				$this->tpl('_/script/2gisMap');
@@ -102,10 +135,27 @@
 			if(is_single()) {
 				$this->tpl('_/script/fancybox');
 			}
+			if($this->post['id'] == 6) {
+				$this->tpl('_/script/fancybox');
+			}
 
+			if(get_post_type() == "ourwork" ) {
+				$this->tpl('_/script/fancybox');
+			}
+			if(get_post_type() == "ourproduct" ) {
+				$this->tpl('_/script/rangeSlider');
+			}
+			if(is_tax('ourproducts-categories')) {
+				$this->tpl('_/script/fancybox');
+			}
+			if($this->entity->post_parent == 7) {
+				$this->tpl('_/script/fancybox');
+			}
+			if($this->entity->post_parent == 8) {
+				$this->tpl('_/script/fancybox');
+			}
 			wp_footer();
 			$this->tpl('_/metrics', array());
-
 		?>
 		<script>
 			(function(){

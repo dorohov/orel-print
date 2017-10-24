@@ -54,8 +54,6 @@
 				.makeCols(4, 12);
 			}
 			&.is--cols-2-5{
-				&.is--btn{padding-top: 30px;}
-				&.is--agreement{padding-top: 15px}	
 				@media @media-notsmart {
 					.makeCols(3, 12); 
 					&.is--btn{.makeCols(4, 12);}
@@ -65,6 +63,11 @@
 					&.is--btn{.makeCols(2.4, 12);}
 					&.is--btn{padding-top: 10px;}
 					&.is--agreement{padding-top: 35px}				
+				}
+				&.is--agreement{padding-top: 15px}	
+				&.is--btn{
+					padding-top: 30px;
+					.makeCols(12, 12);
 				}
 			} 
 			&.is--agreement{

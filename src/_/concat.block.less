@@ -1438,10 +1438,12 @@
 			}
 		}
 		&.is--form-inline{
-			display: block;
-			width: 100%;
+			@media @media-size-xs {				
+				display: block;
+				width: 100%;
+			}
 			span{
-				padding: 8px 10px;
+				padding: 8px 15px;
 			}
 		}	
 		&.is--hidden{
@@ -3006,8 +3008,6 @@
 				.makeCols(4, 12);
 			}
 			&.is--cols-2-5{
-				&.is--btn{padding-top: 30px;}
-				&.is--agreement{padding-top: 15px}	
 				@media @media-notsmart {
 					.makeCols(3, 12); 
 					&.is--btn{.makeCols(4, 12);}
@@ -3017,6 +3017,11 @@
 					&.is--btn{.makeCols(2.4, 12);}
 					&.is--btn{padding-top: 10px;}
 					&.is--agreement{padding-top: 35px}				
+				}
+				&.is--agreement{padding-top: 15px}	
+				&.is--btn{
+					padding-top: 30px;
+					.makeCols(12, 12);
 				}
 			} 
 			&.is--agreement{
@@ -5402,11 +5407,14 @@ body.rtl .formError .formErrorArrow {
 		}
 	}
 	&cols{
-		@media @media-size-xs-p {
+		/*@media @media-size-xs-p {
 			.makeCols(12, 12);
 		}
 		@media @media-size-xs-l {
 			.makeCols(6, 12);
+		}*/
+		@media @media-size-xs {
+			.makeCols(12, 12);
 		}
 		&.is--cols-sm-6{			
 			@media @media-size-sm-l {
@@ -5414,6 +5422,9 @@ body.rtl .formError .formErrorArrow {
 			}
 		}
 		&.is--cols-screen-3{
+			@media @media-size-xs-l {
+				.makeCols(6, 12);
+			}
 			@media @media-size-md {
 				padding: 0;
 				.makeCols(0, 12);
@@ -5444,6 +5455,7 @@ body.rtl .formError .formErrorArrow {
 		}
 		&.is--link{	
 			position: relative;
+			min-height: 100px;
 		}
 	}
 	&inner-cols{
@@ -5453,7 +5465,8 @@ body.rtl .formError .formErrorArrow {
 		}
 		&.is--btn{
 			position: relative;
-			@media @media-size-xs {
+			min-height: 100px;
+			@media @media-size-xs-p {
 				.makeCols(12, 12);
 			}
 		}
@@ -6141,7 +6154,8 @@ body.rtl .formError .formErrorArrow {
 			ul.is--styled{
 				margin-bottom: 10px;
 				& > li{
-					margin-bottom: 3px;
+					margin-bottom: 5px;
+					line-height: 15px;
 					&::before{
 						top: 4px;
 					}
@@ -6178,7 +6192,7 @@ body.rtl .formError .formErrorArrow {
 	}
 	&text-block{
 		margin-bottom: 35px;
-		@media @media-screen {margin-bottom: 4.5vw;}
+		@media @media-screen {margin-bottom: 4.5vw; max-width: 750px;}
 	}
 }
 .products-panel__{

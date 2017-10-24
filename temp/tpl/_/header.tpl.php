@@ -9,7 +9,18 @@
 		if(is_front_page()) {
 			$body_class = $body_class . ' is--index-page ';
 		}
-
+		if(
+			get_post_type() == "ourwork"  ||
+			$this->post['id'] == 3 ||
+			$this->post['id'] == 6 ||
+			$this->post['id'] == 311 ||
+			$this->post['id'] == 313 ||
+			$this->post['id'] == 316 ||
+			$this->post['id'] == 318 ||
+			$this->post['id'] == 320 
+			) {
+			$body_class = $body_class . ' is--navbar-bottom ';
+		}
 		?>
 	</head>
 	<body <?php body_class($body_class); ?>

@@ -1,10 +1,22 @@
 <?
-$azbnblock_id = 54;
-$heading = t($azbnblock_id);
+$adv = get_field('adv', $id);
+if ($adv != ""){
 ?>
-<div class="<?=$param["block_prefix"];?>block">
-	<div class="page-header__block  is--heading  is--center">
-		<h2 class="page-header__heading  is--heading  is--center"><span><?=$heading;?></span></h2>		
-	</div> 
-	<?=c($azbnblock_id);?>
-</div> 
+<div class="advantages-panel__block  is--index" id="index-advantages">  
+	<?
+	$this->tpl(
+		'_/bg-card', 
+		array(
+			"block_prefix" => "bg-plane__",
+			"block_mod" => "is--index-adv-top",
+			"block_bg" => "bg-plane-index-adv-white.png",
+		)
+	);
+	?>
+	<div class="container <?=$param["block_prefix"];?>container bg-header__container">
+		<div class="<?=$param["block_prefix"];?>row row  is--gutter  is--wrap">
+			<?=$adv;?>		
+		</div>
+	</div>
+</div>
+<?}?>

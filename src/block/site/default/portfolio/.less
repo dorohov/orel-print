@@ -93,11 +93,14 @@
 		}
 	}
 	&cols{
-		@media @media-size-xs-p {
+		/*@media @media-size-xs-p {
 			.makeCols(12, 12);
 		}
 		@media @media-size-xs-l {
 			.makeCols(6, 12);
+		}*/
+		@media @media-size-xs {
+			.makeCols(12, 12);
 		}
 		&.is--cols-sm-6{			
 			@media @media-size-sm-l {
@@ -105,6 +108,9 @@
 			}
 		}
 		&.is--cols-screen-3{
+			@media @media-size-xs-l {
+				.makeCols(6, 12);
+			}
 			@media @media-size-md {
 				padding: 0;
 				.makeCols(0, 12);
@@ -135,6 +141,7 @@
 		}
 		&.is--link{	
 			position: relative;
+			min-height: 100px;
 		}
 	}
 	&inner-cols{
@@ -144,7 +151,8 @@
 		}
 		&.is--btn{
 			position: relative;
-			@media @media-size-xs {
+			min-height: 100px;
+			@media @media-size-xs-p {
 				.makeCols(12, 12);
 			}
 		}

@@ -9,10 +9,12 @@
 	if($form_heading == ""){
 		$form_heading = "Узнайте стоимость под ваш проект";
 	};
+	$form_heading_page = t($id);
 	if($form_btn_name == ""){
 		$form_btn_name = "Отправить";
 	}
 	$heading_color = get_field('heading_color', $id);
+	$portfolio_panel = get_field('portfolio_panel', $id);
 ?>
 <div class="content-block <?=$block_prefix;?>content-block  is--hidden" role="main">	
 	<div class="page-header-panel__block  <?=$heading_color;?>">
@@ -95,16 +97,42 @@
 				</div>
 			</div>
 			<?}?>
-			<h1 style="text-align: center;">Настроить примеры наших работ!!!</h1>
-			<pre>
-				<code>
-					[[azbntple 
-						tpl="/src/block/site/default/portfolio/panel-card.html"
-						block_prefix="portfolio-panel__" 
-						block_heading="Примеры наших работ"
-					]]
-				</code>
-			</pre>
+
+			<div class="portfolio-panel__block">
+				<div class="page-header__block  is--heading  is--blue">
+					<h3 class="page-header__heading  is--heading  is--blue"><span>Примеры наших работ</span></h3>		
+				</div>	 
+				<div class="portfolio-panel__row row  is--gutter  is--wrap">
+					<?			
+						foreach($portfolio_panel as $item) {
+							$id = $item->ID;
+							$preview = $this->Imgs->postImg($id, '385x265');
+							$preview_full = $this->Imgs->postImg($id, '1280x880');
+					?>
+					<div class="portfolio-panel__cols cols  is--cols-screen-3  is--cols-sm-6">
+						<div class="portfolio-card__item  block-hover__block">
+							<a href="<?=$preview_full;?>" data-fancybox="portfolio-card" class="portfolio-card__preview">
+								<img src="<?=$preview;?>" alt="" class="img-responsive">	
+								<div class="block-hover__item">
+									<div class="block-hover__icon">
+										<div class="block-hover__icon-inner">
+											<svg class="icon-svg icon-plus" role="img">
+												<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?=$this->path('img');?>/svg/sprite.svg#plus"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<? } ?>
+					<div class="portfolio-panel__cols cols  is--cols-screen-3  is--cols-sm-6  is--link">
+						<div class="portfolio-card__item  is--link">
+							<a href="<?=l(6);?>" class="btn-link__item   "><span>Другие работы</span></a>
+						</div>			
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>	
 	<?
@@ -116,6 +144,7 @@
 			"block_mod" => "is--lg",
 			"block_bg" => "bg-form-panel.jpg",
 			"block_heading" => $form_heading,
+			"block_form_heading" => $form_heading_page,
 			"block_form_prefix" => "form__",
 			"block_form_mod" => "is--inline  is--cols-2-5",
 			"block_form_color" => "is--white",

@@ -12,18 +12,7 @@
 					<div class="page-header__heading-small  is--modals"><?=$param["block_note"]?></div>	
 					<?}?>	
 				</div>
-				<?}?>				
-				<?
-					$this->tpl(
-						'_/form/'.$param["block_tpl"], 
-						array(
-							"block_form_prefix" => $param["block_form_prefix"],
-							"block_form_mod" => $param["block_form_mod"],
-							"block_id" => $param["block_form_id"],
-							"block_btn_name" => $param["block_btn_name"],
-						)
-					);
-				?>	
+				<?}?>
 			</div> 	 
 			<?
 			$this->tpl(

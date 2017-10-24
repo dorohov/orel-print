@@ -68,7 +68,7 @@ $heading_color = get_field('heading_color', $id);
 				<div class="action-panel__cols cols  is--cols-screen-4  is--cols-sm-6">
 					<div class="action-card__item  block-hover__block">
 						<a href="<?=$link;?>" class="action-card__preview">
-							<img src="<?=$preview;?>" alt="<?=$title;?>">	
+							<img src="<?=$preview;?>" alt="<?=$title;?>" class="img-responsive">	
 							<div class="block-hover__item">		
 								<div class="block-hover__heading"><?=$title;?></div>
 								<div class="block-hover__icon">

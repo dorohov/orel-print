@@ -44,9 +44,9 @@
 	<div class="container content-block__container blog-page__container  bg-header__container">
 		<div class="text__container">
 			<div class="text__block">
-				<? if ($preview != ""){?>
+				<?/* if ($preview != ""){?>
 				<div><img src="<?=$preview;?>" alt="<?=t($id);?>"></div>
-				<?}?>
+				<?}*/?>
 				<?=c($this->post['id']);?>
 			</div>
 		</div>
