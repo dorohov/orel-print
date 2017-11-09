@@ -16,6 +16,8 @@ $(function(){
 	if (userAgent.indexOf('opera') != -1) res = 'opera';
 	if (userAgent.indexOf('yabrowser') != -1) res = 'yabrowser';
 	
+	if (userAgent.indexOf('macintosh') != -1) res = res + ' macintosh ';
+	
 	$('html').eq(0).addClass(res);
 }); 
 

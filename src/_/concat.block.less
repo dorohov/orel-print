@@ -2464,6 +2464,11 @@
 		html.safari &{
 			width: 100%;
 		}
+		html.macintosh.chrome &,
+		html.macintosh.yabrowser &{
+			padding-left: 40px;
+			//left: 15px;
+		}
 	}
 	&select{
 		position: relative;
@@ -2499,10 +2504,11 @@
 				padding-left: 0;
 			}
 		}
-		/*html.macintosh.yabrowser &{
-			padding-left: 0;
-			left: 15px;
-		}*/
+		html.macintosh.chrome &,
+		html.macintosh.yabrowser &{
+			padding-left: 0px;
+			//left: 15px;
+		}
 	}
 	&select-icon{
 		width: 30px;
