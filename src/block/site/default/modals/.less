@@ -59,7 +59,12 @@
 	position: relative;
 	@media @media-size-xs 	{width: auto;	margin: 0px;}  
 	@media @media-size-sm 	{width: 620px;	margin: 10px auto;}  
-	@media @media-screen 	{width: 580px;	margin: 0px auto;} 
+	@media @media-screen 	{
+		width: 580px;	margin: 0px auto;
+		&.is--basket{
+			width: 620px;
+		}
+	} 
 	 
 }
 .modal-body {
@@ -235,5 +240,8 @@
 			opacity: 1;
 			display: block;
 		}
+	}
+	&btn{
+		//margin-bottom: 10px;
 	}
 }

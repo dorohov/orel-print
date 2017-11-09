@@ -6,21 +6,28 @@
 				<div class="{{block_prefix}}type">Визитки на картонной бумаге</div>
 				<div class="{{block_prefix}}text-block text__block">
 					<ul>
-						<li><b>Размер:</b> <span>90*50</span></li>
-						<li><b>Тип печати:</b> <span>1-сторонняя</span></li>
-						<li><b>Количество:</b> <span>500</span></li>
-						<li><b>Отделка:</b> <span>Лакирование</span></li>
-						<li><b>Макет:</b> <span>Нет</span></li>
+						<li>
+							<b>Размер:</b> <span>90*50</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]</button>
+						</li>
+						<li><b>Тип печати:</b> <span>1-сторонняя</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]</button></li>
+						<li><b>Количество:</b> <span>500</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]</button></li>
+						<li><b>Отделка:</b> <span>Лакирование</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]</button></li>
+						<li><b>Макет:</b> <span>Нет</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close" ]]</button></li>
 					</ul>
 				</div>
 				<div class="{{block_prefix}}cost">Цена: <span class="{{block_prefix}}cost-num">10 678</span><span class="{{block_prefix}}cost-ruble">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]</span></div> 
-				<div class="{{block_prefix}}basket">
+				<div class="{{block_prefix}}basket">				
 					[[azbntple 
-						tpl="/src/block/site/default/button/button.html"
+						tpl="/src/block/site/default/button/button-modal.html"
 						button_prefix="btn__" 
-						button_mod="is--bg  is--calc-result"
-						button_type="button" 
-						button_name="В корзину"
+						button_mod="is--bg  is--calc-result" 
+						button_target="modal-basket"
+						button_name="Добавить в корзину"
 					]]
 				</div> 
 				<div class="{{block_prefix}}buy">

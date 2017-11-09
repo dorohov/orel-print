@@ -526,14 +526,15 @@
 					
 				</div>
 				<div class="calc-panel__calc-cols cols">
-					<label for="maket" class="btn-link__item  is--icon">
+					<label for="maket" class="btn-link__item  is--notline  is--icon">
 	<input type="file" name="maket" id="maket" class="btn-link__file">
-	<div class="btn-link__icon  is--icon">
+	<div class="btn-link__icon  is--notline  is--icon">
 		<svg class="icon-svg icon-btn-icon-maket" role="img">
 			<use xlink:href="/img/svg/sprite.svg#btn-icon-maket"></use>
 		</svg>
 	</div>
 	<span>Загрузить макет</span>
+	<small class="btn-link__note">Макет в формате .jpg или архив в формате .zip</small>
 </label> 
 				</div>
 			</div>
@@ -547,18 +548,35 @@
 				<div class="calc-result__type">Визитки на картонной бумаге</div>
 				<div class="calc-result__text-block text__block">
 					<ul>
-						<li><b>Размер:</b> <span>90*50</span></li>
-						<li><b>Тип печати:</b> <span>1-сторонняя</span></li>
-						<li><b>Количество:</b> <span>500</span></li>
-						<li><b>Отделка:</b> <span>Лакирование</span></li>
-						<li><b>Макет:</b> <span>Нет</span></li>
+						<li>
+							<b>Размер:</b> <span>90*50</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр"><svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg></button>
+						</li>
+						<li><b>Тип печати:</b> <span>1-сторонняя</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр"><svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg></button></li>
+						<li><b>Количество:</b> <span>500</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр"><svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg></button></li>
+						<li><b>Отделка:</b> <span>Лакирование</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр"><svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg></button></li>
+						<li><b>Макет:</b> <span>Нет</span>
+							<button class="btn__item  is--del" type="button" title="Сбросить параметр"><svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg></button></li>
 					</ul>
 				</div>
 				<div class="calc-result__cost">Цена: <span class="calc-result__cost-num">10 678</span><span class="calc-result__cost-ruble"><svg class="icon-svg icon-ruble" role="img">
 	<use xlink:href="/img/svg/sprite.svg#ruble"></use>
 </svg></span></div> 
-				<div class="calc-result__basket">
-					<button type="button" class="btn__item is--bg  is--calc-result"><span>В корзину</span></button>
+				<div class="calc-result__basket">				
+					<button type="button" class="btn__item is--bg  is--calc-result" data-toggle="modal" data-target="#modal-basket"><span>Добавить в корзину</span></button>
 				</div> 
 				<div class="calc-result__buy">
 					<button type="button" class="btn__item is--calc-result" data-toggle="modal" data-target="#modal-buy"><span>Купить в 1 клик</span></button>
@@ -800,6 +818,34 @@
 		</div> 
 	</div>
 </div>	
+		<div class="modal fade modal-base__modal" id="modal-basket" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-base__dialog  is--basket">
+		<div class="modal-body modal-base__body" >
+			<button type="button" class="btn-site  modal-base__close  modal-close" data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-modal-close" role="img">
+	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
+</svg>
+			</button>
+			<div class="modal-content modal-base__content">
+				<div class="page-header__block  is--modals">
+	<h4 class="page-header__heading  is--modals"><span>Товар успешно добавлен!</span></h4>	
+	<div class="page-header__heading-small  is--modals">  </div>		
+</div>	
+				<div class="modal-base__btn-row row  is--wrap  is--gutter10">
+					<div class="modal-base__btn-cols cols">
+						<div class="modal-base__btn">
+						<a href="/basket.html" class="btn__item is--bg  is--sm"><span>Перейти в корзину</span></a>
+						</div>
+					</div>
+					<div class="modal-base__btn-cols cols">
+						<div class="modal-base__btn">
+							<a href="/products.html" class="btn__item is--sm"><span>Продолжить покупки</span></a>
+					</div> 	
+				</div> 	
+			</div> 
+		</div>
+	</div>
+</div>
 		<div class="modal fade modal-base__modal" id="modal-buy" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-base__dialog  is--enter">
 		<div class="modal-body modal-base__body  is--enter" >
