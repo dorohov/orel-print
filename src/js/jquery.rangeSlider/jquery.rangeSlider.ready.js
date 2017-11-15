@@ -3,8 +3,8 @@ $(function() {
 	var $range = $("#inputRange"),
 		$input = $("#inputRangeinput"),
 		instance,
-		min = 50,
-		max = 15000;
+		min = parseInt($input.attr('min')) || 50,
+		max = parseInt($input.attr('max')) || 15000;
 	
 	var azbn__sendChangeTrigger = function(val) {
 		
@@ -23,8 +23,8 @@ $(function() {
 		type: "single",
 		min: min,
 		max: max,
-		step: 50,
-		from: 500,
+		step: parseInt($input.attr('step')) || 50,
+		from: parseInt($input.attr('value')),
 		onStart: function (data) {
 			
 			$input.prop("value", data.from);
@@ -36,7 +36,7 @@ $(function() {
 			
 			$input.prop("value", data.from);
 			
-			azbn__sendChangeTrigger(data.from);
+			//azbn__sendChangeTrigger(data.from);
 			
 		}
 	});
