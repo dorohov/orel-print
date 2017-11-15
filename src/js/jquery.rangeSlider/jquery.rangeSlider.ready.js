@@ -36,7 +36,7 @@ $(function() {
 			
 			$input.prop("value", data.from);
 			
-			//azbn__sendChangeTrigger(data.from);
+			azbn__sendChangeTrigger(data.from);
 			
 		}
 	});
