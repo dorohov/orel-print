@@ -61,11 +61,9 @@ $(function() {
 			val = max;
 		}
 		
-		/*
 		instance.update({
 			from: val
 		});
-		*/
 		
 		azbn__sendChangeTrigger(val);
 		
