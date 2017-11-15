@@ -1,25 +1,3 @@
-.action-panel__{	
-	&cols{
-		@media @media-size-xs-l {
-			.makeCols(6, 12);
-		}
-	}
-}
-.action-card__{
-	&item{
-		@media @media-size-xs-p {
-			margin-bottom: 20px;
-		}					
-	}
-	
-	&preview{
-		display: block;
-		position: relative;
-		img{
-			box-shadow: 6px 10px 24px 0px fadeout(@black, 80%);
-		}
-	}	
-}
 .advantages-panel__{
 	&block{
 		margin-bottom: 40px;
@@ -102,6 +80,28 @@
 			br{display: none;}
 		}
 	}
+}
+.action-panel__{	
+	&cols{
+		@media @media-size-xs-l {
+			.makeCols(6, 12);
+		}
+	}
+}
+.action-card__{
+	&item{
+		@media @media-size-xs-p {
+			margin-bottom: 20px;
+		}					
+	}
+	
+	&preview{
+		display: block;
+		position: relative;
+		img{
+			box-shadow: 6px 10px 24px 0px fadeout(@black, 80%);
+		}
+	}	
 }
 .block-hover__{ 
 	&block{

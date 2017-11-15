@@ -25,26 +25,34 @@ $(function() {
 		max: max,
 		step: parseInt($input.attr('step')) || 50,
 		from: parseInt($input.attr('value')),
-		onStart: function (data) {
+		onStart : function (data) {
 			
-			$input.prop("value", data.from);
+			$input.prop('value', data.from);
+			
+			//azbn__sendChangeTrigger(data.from);
+			
+		},
+		onChange : function (data) {
+			
+			$input.prop('value', data.from);
+			
+			//azbn__sendChangeTrigger(data.from);
+			
+		},
+		onFinish : function (data) {
+			
+			$input.prop('value', data.from);
 			
 			azbn__sendChangeTrigger(data.from);
 			
 		},
-		onChange: function (data) {
-			
-			$input.prop("value", data.from);
-			
-			azbn__sendChangeTrigger(data.from);
-			
-		}
 	});
 	
 	instance = $range.data("ionRangeSlider");
 	
-	$input.on("change keyup", function () {
-		var val = $(this).prop("value");
+	$input.on('change keyup click', function () {
+		
+		var val = $(this).prop('value');
 		
 		// validate
 		if (val < min) {
@@ -53,9 +61,11 @@ $(function() {
 			val = max;
 		}
 		
+		/*
 		instance.update({
 			from: val
 		});
+		*/
 		
 		azbn__sendChangeTrigger(val);
 		
