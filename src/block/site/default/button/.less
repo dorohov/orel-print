@@ -449,11 +449,14 @@
 	&note{
 		display: block;
 		font-size: @b-fs - 4;
-		line-height: @b-fs - 10;
+		line-height: @b-lh - 12;
 		letter-spacing: 0;
 		text-transform: none;
 		font-weight: 400;
 		color: @btn-color;
+		& + &{
+			padding-top: 2px;
+		}
 	}
 }
 @keyframes down {
@@ -469,4 +472,4 @@
 		opacity: 0;
 		transform: translateY(0px);
 	}
-}
+}btn-link__note
