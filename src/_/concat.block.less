@@ -2297,6 +2297,14 @@
 	}
 }
 .calc-panel__{
+	&block{
+		& + .portfolio-panel__block{
+			padding-top: 25px;
+			@media @media-screen {
+				padding-top: 2vw;
+			}
+		}
+	}
 	&cols{
 		@media @media-device {.makeCols(12, 12);}
 		&.is--cols-screen-8{
