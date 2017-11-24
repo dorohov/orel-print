@@ -6389,6 +6389,44 @@ body.rtl .formError .formErrorArrow {
 	&text-block{
 		margin-bottom: 35px; 
 		@media @media-screen {margin-bottom: 4.5vw;}
+		div{
+			&.services-panel-card__inner-row,
+			&.services-panel-card__inner-cols,
+			&.services-panel-card__inner-item,
+			&.services-panel-card__item-name{margin-bottom: 0}
+			&.services-panel-card__item-preview{
+				margin-bottom: 10px;
+			}
+			&.services-panel-card__inner{
+				margin-bottom: 15px;
+			}
+		}
+	}
+	&inner{
+		margin-top: 15px;
+	}
+	&inner-row{
+
+	}
+	&inner-cols{
+		&.is--cols-3{
+			@media @media-size-xs-p {
+				.makeCols(6, 12);
+			}
+			@media @media-size-xs-l {
+				.makeCols(3, 12);
+			}
+		}
+	}
+	&item-preview{
+		width: 60px;
+		height: 60px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&item-name{
+		text-align: center;
+		color: @b-color-h
 	}
 }
 .services-card__{
