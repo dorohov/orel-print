@@ -16,22 +16,23 @@
 				header_small_level="h3"
 				header_small="{{block_heading_small}}"
 			]]	
+			[[azbntple 
+				tpl="/src/block/site/default/bg/round.html" 
+				block_prefix="bg-round__" 
+			]]		
 		</div>	
-		[[azbntple 
-			tpl="/src/block/site/default/bg/round.html" 
-			block_prefix="bg-round__" 
-		]]			
-		[[azbntple 
-			tpl="/src/block/site/default/bg/card-plane.html" 
-			block_prefix="bg-plane__"
-			block_mod="is--portfolio  is--speed-5"  
-			block_bg="bg-plane-portfolio.png"
-		]]		
-	</div>
+	</div>		
+	
 	<div class="container content-block__container {{block_prefix}}container  bg-header__container">
 		[[azbntple 
 			tpl="/src/block/site/default/products/panel-category.html"
 			block_prefix="products-panel-category__" 
 		]]
 	</div>	
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card-plane.html" 
+		block_prefix="bg-plane__"
+		block_mod="is--portfolio  is--speed-5"  
+		block_bg="bg-plane-portfolio.png"
+	]]	
 </div>
