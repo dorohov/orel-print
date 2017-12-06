@@ -49,8 +49,43 @@
 				background-color: #f2f3f9;
 			}
 			&:hover{
-				background-color: @yellow;
+				//background-color: @yellow;
+				background: fadeout(@turquoise, 85%);
 			}
+		}
+
+		&.is--print{
+			&:hover{background: fadeout(#007172, 85%);}
+		}
+		&.is--calendar{
+			&:hover{background: fadeout(#39a736, 85%);}
+		}
+		&.is--price{
+			&:hover{background: fadeout(#8cbe23, 85%);}
+		}
+		&.is--blank{
+			&:hover{background: fadeout(#d7c002, 85%);}
+		}
+		&.is--catalog{
+			&:hover{background: fadeout(#f08200, 85%);}
+		}
+		&.is--action{
+			&:hover{background: fadeout(#e84815, 85%);}
+		}
+		&.is--suvenirka{
+			&:hover{background: fadeout(#bb0433, 85%);}
+		}
+		&.is--card{
+			&:hover{background: fadeout(#c6005e, 85%);}
+		}
+		&.is--calc{
+			&:hover{background: fadeout(#9d2e88, 85%);}
+		}
+		&.is--blocknote{
+			&:hover{background: fadeout(#5c2483, 85%);}
+		}
+		&.is--basket{
+			&:hover{background: fadeout(#2f2a81, 85%);}
 		}
 	}
 	&icon{

@@ -1,6 +1,3 @@
-.error-page__{
-	
-}
 .action-panel__{	
 	&cols{
 		@media @media-size-xs-l {
@@ -4772,6 +4769,10 @@ body.rtl .formError .formErrorArrow {
 			margin-top: 0;
 			& > .cols{padding-top: 0;}
 		}
+		@media @media-size-xxl {
+			margin-right: -20px;
+			margin-left: -20px;
+		}
 	}
 	&nav-dropdown-cols{
 		&,
@@ -4779,6 +4780,10 @@ body.rtl .formError .formErrorArrow {
 			@media @media-device-lg {
 				.makeCols(12, 12);
 			}
+		}
+		@media @media-size-xxl {
+			padding-right: 20px;
+			padding-left: 20px;
 		}
 	}
 	&nav-dropdown-menu{
@@ -6224,8 +6229,43 @@ body.rtl .formError .formErrorArrow {
 				background-color: #f2f3f9;
 			}
 			&:hover{
-				background-color: @yellow;
+				//background-color: @yellow;
+				background: fadeout(@turquoise, 85%);
 			}
+		}
+
+		&.is--print{
+			&:hover{background: fadeout(#007172, 85%);}
+		}
+		&.is--calendar{
+			&:hover{background: fadeout(#39a736, 85%);}
+		}
+		&.is--price{
+			&:hover{background: fadeout(#8cbe23, 85%);}
+		}
+		&.is--blank{
+			&:hover{background: fadeout(#d7c002, 85%);}
+		}
+		&.is--catalog{
+			&:hover{background: fadeout(#f08200, 85%);}
+		}
+		&.is--action{
+			&:hover{background: fadeout(#e84815, 85%);}
+		}
+		&.is--suvenirka{
+			&:hover{background: fadeout(#bb0433, 85%);}
+		}
+		&.is--card{
+			&:hover{background: fadeout(#c6005e, 85%);}
+		}
+		&.is--calc{
+			&:hover{background: fadeout(#9d2e88, 85%);}
+		}
+		&.is--blocknote{
+			&:hover{background: fadeout(#5c2483, 85%);}
+		}
+		&.is--basket{
+			&:hover{background: fadeout(#2f2a81, 85%);}
 		}
 	}
 	&icon{
@@ -6917,3 +6957,6 @@ blockquote {
 	}*/
 }
 .color--blue{color: @blue;}
+.error-page__{
+	
+}
