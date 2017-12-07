@@ -1,62 +1,98 @@
 <div class="{{block_prefix}}block">
 	<div class="{{block_prefix}}row row  is--gutter  is--wrap">
 		<div class="{{block_prefix}}cols cols  is--cols-screen-8  is--cols-sm-12">
-			<h4 class="{{block_prefix}}heading">Визитки на картонной бумаге</h4>
 			<div class="{{block_prefix}}calc-row row  is--wrap  is--gutter15">
-				<div class="{{block_prefix}}calc-cols cols">
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
 					[[azbntple 
-						tpl="/src/block/site/default/calc/select.html"
-						block_prefix="select-block__" 
-						block_heading="Выберите размер:"
-						block_option="<option>Стандарт 90*50</option><option>Евро 85*55</option><option>Нестандартный</option>"
+						tpl="/src/block/site/default/calc/card-format.html"
+						block_prefix="calc-card__" 
+						block_mod="is--format" 
+						block_heading="Выберите формат:"
 					]]
 				</div>
-				<div class="{{block_prefix}}calc-cols cols">
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
 					[[azbntple 
-						tpl="/src/block/site/default/calc/select.html"
-						block_prefix="select-block__" 
-						block_heading="Печать:"
-						block_option="<option>Односторонняя</option><option>Двусторонняя</option>"
+						tpl="/src/block/site/default/calc/card-format-mail.html"
+						block_prefix="calc-card__" 
+						block_mod="is--format" 
+						block_heading="Выберите формат конверта:"
 					]]
 				</div>
-				<div class="{{block_prefix}}calc-cols cols">
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
 					[[azbntple 
-						tpl="/src/block/site/default/calc/select.html"
-						block_prefix="select-block__" 
-						block_heading="Бумага:"
-						block_option="<option>Majestic</option><option>Touch cover</option><option>Лён</option><option>Другая</option>"
+						tpl="/src/block/site/default/calc/card-orientation.html"
+						block_prefix="calc-card__" 
+						block_mod="is--card"  
+						block_heading="Ориентация:"
 					]]
 				</div>
-				<div class="{{block_prefix}}calc-cols cols">
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
 					[[azbntple 
-						tpl="/src/block/site/default/calc/select.html"
-						block_prefix="select-block__" 
-						block_heading="Отделка:"
-						block_option="<option>Лакирование</option><option>Трафарет</option><option>Вырубка</option>"
+						tpl="/src/block/site/default/calc/card-size.html"
+						block_prefix="calc-card__" 
+						block_mod="is--card  is--xl"  
+						block_heading="Выберите размер:" 
 					]]
 				</div>
-				<div class="{{block_prefix}}calc-cols cols  is--cols-12  azbn__calc__field">
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/card-calendar.html"
+						block_prefix="calc-card__" 
+						block_mod="is--card  is--xl"  
+						block_heading="Вид календаря:" 
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/card-calendar-reklam.html"
+						block_prefix="calc-card__" 
+						block_mod="is--card  is--xl"  
+						block_heading="Тип квартального календаря:" 
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/card-paper.html"
+						block_prefix="calc-card__" 
+						block_mod="is--card  is--xl  is--paper"  
+						block_heading="Тип бумаги:" 
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/card-treatment.html"
+						block_prefix="calc-card__" 
+						block_mod="is--card  is--xl  is--treatment"  
+						block_heading="Дополнительная обработка:" 
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/card-color.html"
+						block_prefix="calc-card__" 
+						block_mod="is--color"  
+						block_heading="Выберите цвет:" 
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12 azbn__calc__field">
 					[[azbntple 
 						tpl="/src/block/site/default/calc/range.html"
 						block_prefix="range-block__" 
 						block_heading="Количество:"
 						block_range_id="inputRange"
 					]]
-					
 				</div>
-				<div class="{{block_prefix}}calc-cols cols">
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
 					[[azbntple 
-						tpl="/src/block/site/default/button/file-icon.html"
-						button_prefix="btn-link__" 
-						button_mod="is--notline  is--icon"
-						button_for="maket"
-						button_name="Загрузить макет"
-						button_icon="btn-icon-maket"
-					]] 
+						tpl="/src/block/site/default/calc/card-maket.html"
+						block_prefix="calc-card__" 
+						block_mod="is--card  is--xl"  
+						block_heading="Нужен ли Вам индивидуальный дизайн?" 
+					]]
 				</div>
 			</div>
 		</div>
-		<div class="{{block_prefix}}cols cols  is--cols-screen-4  is--cols-sm-12">
+		<div class="{{block_prefix}}cols cols  is--cols-screen-4  is--cols-sm-12  is--result">
 			[[azbntple 
 				tpl="/src/block/site/default/calc/result.html"
 				block_prefix="calc-result__" 

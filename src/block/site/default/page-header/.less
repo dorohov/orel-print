@@ -149,6 +149,9 @@
 		&.is--portfolio-card{
 			@media @media-screen {margin-bottom: 4vw;}
 		}
+		&.is--calc-card{
+			@media @media-screen {margin-bottom: 2.2vw;}			
+		}
 	}
 	&heading{
 		color: @page_header_color;
@@ -176,6 +179,12 @@
 		}	
 		&.is--calc{
 			font-weight: 700;
+		}	
+		&.is--calc-card{
+			color: @b-color-a;
+			font-weight: 500;
+			border-bottom: 1px solid @b-color-a;
+			padding-bottom: 5px;
 		}	
 		&.is--icon{			
 			@media @media-notsmart{letter-spacing: 3.5px;}

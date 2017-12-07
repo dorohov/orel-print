@@ -50,6 +50,11 @@ function fecss_ScreenJS() {
 			'portrait' : [],
 			'landscape' : [],
 		},
+		'screenLG' : {
+			'default' : [],
+			'portrait' : [],
+			'landscape' : [],
+		},
 		'xxl' : {
 			'default' : [],
 			'portrait' : [],
@@ -85,6 +90,9 @@ function fecss_ScreenJS() {
 	ctrl.device = function() {
 		return (ctrl.screen.w < 1010);
 	};
+	ctrl.screenLG = function() {
+		return (ctrl.screen.w > 1199);
+	};
 	ctrl.pc = function() {
 		return (ctrl.screen.w > 1024);
 	};
@@ -114,6 +122,9 @@ function fecss_ScreenJS() {
 		}else
 		if(ctrl.device()) {
 			result = 'device';
+		}else
+		if(ctrl.screenLG()) {
+			result = 'pc';
 		}else
 		if(ctrl.pc()) {
 			result = 'pc';
