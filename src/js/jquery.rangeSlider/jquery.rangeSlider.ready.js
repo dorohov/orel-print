@@ -8,9 +8,9 @@ $(function() {
 	
 	var azbn__sendChangeTrigger = function(val) {
 		
-		var item = $input.closest('.azbn__calc__field');
+		var item = $input.closest('.azbn__calc__field_new');
 		
-		item.trigger('azbn7.ui.calc.field.change', [{
+		item.trigger('azbn7.ui.calc.field_new.change', [{
 			uid : item.attr('data-uid'),
 			visible_value : val,
 			value : val,
