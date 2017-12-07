@@ -48,9 +48,8 @@ $(function() {
 		},
 	});
 	
-	instance = $range.data("ionRangeSlider");
-	
-	$input.on('change keyup click', function () {
+	$input.on('change keyup click', function (event) {
+		event.preventDefault();
 		
 		var val = $(this).prop('value');
 		
@@ -68,4 +67,7 @@ $(function() {
 		azbn__sendChangeTrigger(val);
 		
 	});
+	
+	instance = $range.data("ionRangeSlider");
+	
 });
