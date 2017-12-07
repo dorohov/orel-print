@@ -80,7 +80,43 @@
 		}
 		&.is--orient{
 			@media @media-size-xs-p {
+				.makeCols(12, 12);
+			}
+		}
+		&.is--format{
+			@media @media-size-xs-p {
+				.makeCols(12, 12);
+			}
+			@media @media-size-xs-l {
 				.makeCols(6, 12);
+			}
+			@media @media-size-sm {
+				.makeCols(4, 12);
+			}
+			@media @media-screen{
+				&.is--cols-screen-3{.makeCols(3, 12);}
+				.makeCols(2.25, 12);
+			}
+			@media @media-size-lg{
+				&.is--cols-screen-3{.makeCols(4, 12);}
+				.makeCols(4, 12);
+			}
+		}
+		&.is--format-mail{
+			@media @media-size-xs-p {
+				.makeCols(12, 12);
+			}
+			@media @media-size-xs-l {
+				.makeCols(6, 12);
+			}
+			@media @media-size-sm {
+				.makeCols(4, 12);
+			}
+			@media @media-screen{
+				.makeCols(2.4, 12);
+			}
+			@media @media-size-lg{
+				.makeCols(4, 12);
 			}
 		}
 	}
@@ -100,11 +136,10 @@
 			border-color: #f8f8f8;
 			background-color: #f8f8f8;
 			position: relative;
-			//padding: 15px 35px;
 			&::before{
 				content: '';
 				position: absolute;
-				top: 13px;
+				top: 23px;
 				left: 13px;
 				border: 1px solid;
 				border-color: @blue-dark;
@@ -112,16 +147,7 @@
 				height: 10px;
 				border-radius: 50%;
 				transition: @trs-site;
-			}
-			&.is--xl{				
-				@media @media-screen {
-					//padding: 20px 35px;
-					&::before{
-						top: 23px;
-						//left: 10px;
-					}
-				}
-			}
+			}				
 			&.is--active{
 				border-color: #e7e9f2;
 				background-color: @white;
@@ -141,13 +167,7 @@
 		width: 100%;
 		transition: @trs-site;
 		&.is--card{
-			padding: 15px 35px;
-			&.is--xl{
-				padding: 20px 35px;
-				&::before{
-					top: 23px;
-				}
-			}
+			padding: 20px 35px;
 		}
 		.calc-card__elem.is--color &{
 			border-radius: 50%;
@@ -173,10 +193,8 @@
 			padding-top: 25px;
 		}
 		&.is--card{
-			&.is--xl{
-				font-size: @b-fs - 2;
-				line-height: @b-lh - 6;
-			}
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 6;
 		}
 		.calc-card__elem.is--active &{
 			color: @blue;
