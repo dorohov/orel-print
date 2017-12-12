@@ -2462,6 +2462,72 @@
 					box-shadow: 0px 0px 7px fadeout(@b-color-a, 50%);
 				}
 			}
+			&.is--checkbox{
+				&::before{
+					display: none;
+				}
+
+			}
+		}
+	}
+	&elem-input{
+		display: none;
+		&.is--card{
+			&.is--checkbox{
+				display: block;
+				position: absolute;
+				top: 23px;
+				left: 13px;
+				border: 1px solid;
+				border-color: @blue-dark;
+				width: 10px;
+				height: 10px;
+				transition: @trs-site;
+				&::before,
+				&::after{
+					content: '';
+					position: absolute;
+					height: 1px;
+					background-color: @b-color-a;
+					opacity: 0;
+					transition: @trs-site;
+				}
+				&::before{
+					width: 3px;    
+					transform: scale(5) rotate(45deg);
+					top: 4px;
+					left: 1px;
+				    top: 2px;
+					left: -1px;
+				}
+				&::after{
+					width: 6px;
+					transform: scale(5) rotate(-45deg);
+					top: 3px;
+					left: 2px;
+					top: -4px;
+					left: 10px;
+				}
+				.calc-card__elem.is--active  &{					
+					//background-color: @b-color-a;
+					border-color: @b-color-a;
+					box-shadow: 0px 0px 7px fadeout(@b-color-a, 50%);
+					&::before,
+					&::after{
+						opacity: 1;
+					}
+					&::before{   
+						transform: scale(1) rotate(45deg);
+						top: 4px;
+						left: 1px;
+					}
+					&::after{
+						transform: scale(1) rotate(-45deg);
+						top: 3px;
+						left: 2px;
+					}
+				}
+			}
 		}
 	}
 	&elem-btn{		
