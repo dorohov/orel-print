@@ -10,6 +10,11 @@ $(function() {
 		
 		var item = $input.closest('.azbn__calc__field_new');
 		
+		item
+			.attr('data-value', val)
+			.attr('data-visible_value', val)
+		;
+		
 		item.trigger('azbn7.ui.calc.field_new.change', [{
 			uid : item.attr('data-uid'),
 			visible_value : val,
