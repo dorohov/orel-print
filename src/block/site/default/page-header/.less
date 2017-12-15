@@ -150,7 +150,16 @@
 			@media @media-screen {margin-bottom: 4vw;}
 		}
 		&.is--calc-card{
-			@media @media-screen {margin-bottom: 2.2vw;}			
+			background-color: #d5ebf0;
+			margin-bottom: 0;
+			border-bottom: 2px solid fadeout(@b-color-a, 100%);
+			transition: @trs-site;
+			//@media @media-screen {margin-bottom: 2.2vw;}
+			padding: 20px;
+			._activated &{
+				border-bottom-color: @b-color-a;
+				background-color: fadeout(#d5ebf0, 100%);
+			}			
 		}
 	}
 	&heading{
@@ -181,10 +190,13 @@
 			font-weight: 700;
 		}	
 		&.is--calc-card{
-			color: @b-color-a;
+			color: @black17;
 			font-weight: 500;
-			border-bottom: 1px solid @b-color-a;
-			padding-bottom: 5px;
+			//border-bottom: 1px solid @b-color-a;
+			//padding-bottom: 5px;
+			._activated &{
+				color: @b-color-a;
+			}
 		}	
 		&.is--icon{			
 			@media @media-notsmart{letter-spacing: 3.5px;}

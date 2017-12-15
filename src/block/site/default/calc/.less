@@ -39,7 +39,7 @@
 			.makeCols(6, 12);
 		}
 		@media @media-screen {
-			margin-bottom: 1.5vw;
+			//margin-bottom: 1.5vw;
 			.makeCols(6, 12);
 		}
 		&.is--cols-12{
@@ -60,10 +60,20 @@
 }
 .calc-card__{
 	&list{
-		margin-bottom: 15px;
+		//display: none;
+		padding-top: 30px;
+		margin-bottom: 35px;
 		@media @media-screen {
-			margin-bottom: 1.4vw;
+			padding-top: 2.2vw;
+			//margin-bottom: 1.4vw;
+			margin-bottom: 3.9vw;
 		}
+		._activated &{
+			//display: block;
+		}
+	}
+	&item{
+		margin-bottom: 6px;
 	}
 	&row{}
 	&cols{
@@ -133,9 +143,11 @@
 		}
 		&.is--card{
 			border: 1px solid;
-			border-color: #f8f8f8;
-			background-color: #f8f8f8;
+			//border-color: #f8f8f8;
+			border-color: #e7e9f2;
+			//background-color: #f8f8f8;
 			position: relative;
+			border-radius: 5px;
 			&::before{
 				content: '';
 				position: absolute;
@@ -149,12 +161,17 @@
 				transition: @trs-site;
 			}				
 			&.is--active{
-				border-color: #e7e9f2;
-				background-color: @white;
+				//border-color: #e7e9f2;
+				//background-color: @white;
+				border-color: @b-color-a;
+				background-color: @b-color-a;
 				&::before{
-					background-color: @b-color-a;
-					border-color: @b-color-a;
-					box-shadow: 0px 0px 7px fadeout(@b-color-a, 50%);
+					//background-color: @b-color-a;
+					//border-color: @b-color-a;
+					//box-shadow: 0px 0px 7px fadeout(@b-color-a, 50%);
+					box-shadow: 0px 0px 7px fadeout(@white, 50%);
+					border-color: @white;
+					background-color: @white;
 				}
 			}
 			&.is--checkbox{
@@ -183,7 +200,8 @@
 					content: '';
 					position: absolute;
 					height: 1px;
-					background-color: @b-color-a;
+					//background-color: @b-color-a;
+					background-color: @white;
 					opacity: 0;
 					transition: @trs-site;
 				}
@@ -205,8 +223,10 @@
 				}
 				.calc-card__elem.is--active  &{					
 					//background-color: @b-color-a;
-					border-color: @b-color-a;
-					box-shadow: 0px 0px 7px fadeout(@b-color-a, 50%);
+					//border-color: @b-color-a;
+					border-color: @white;
+					//box-shadow: 0px 0px 7px fadeout(@b-color-a, 50%);
+					box-shadow: 0px 0px 7px fadeout(@white, 50%);
 					&::before,
 					&::after{
 						opacity: 1;
@@ -255,6 +275,7 @@
 		font-size: @b-fs;
 		line-height: @b-lh - 6;
 		transition: @trs-site;
+		font-weight: 700;
 		& + .calc-card__elem-preview{
 			padding-top: 25px;
 		}
@@ -263,7 +284,8 @@
 			line-height: @b-lh - 6;
 		}
 		.calc-card__elem.is--active &{
-			color: @blue;
+			//color: @blue;
+			color: @white;
 		}
 	}
 	&elem-note{
@@ -272,6 +294,13 @@
 		font-size: @b-fs - 4;
 		line-height: @b-lh - 8;
 		color: lighten(@black, 40%);
+		transition: @trs-site;
+		.calc-card__elem.is--active &{
+			color: @white;
+			a{
+				color: @white;
+			}
+		}
 	}
 	&elem-preview{
 		display: block;
@@ -296,7 +325,7 @@
 		background: #e3e3e3;
 		border-radius: 50%;
 		transition: @trs-site;
-		margin-left: 10px;
+		margin-left: 5px;
 		&:hover{
 			color: @blue;
 			background: @yellow;

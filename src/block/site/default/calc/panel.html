@@ -1,13 +1,21 @@
 <div class="{{block_prefix}}block">
 	<div class="{{block_prefix}}row row  is--gutter  is--wrap">
 		<div class="{{block_prefix}}cols cols  is--cols-screen-8  is--cols-sm-12">
-			<div class="{{block_prefix}}calc-row row  is--wrap  is--gutter15">
+			<div class="{{block_prefix}}calc-row row  is--wrap">
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12  _activated">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/card-maket.html"
+						block_prefix="calc-card__" 
+						block_mod="is--card"  
+						block_heading="01. Нужен ли Вам индивидуальный дизайн?" 
+					]]
+				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
 					[[azbntple 
 						tpl="/src/block/site/default/calc/card-format.html"
 						block_prefix="calc-card__" 
 						block_mod="is--card  " 
-						block_heading="Выберите формат:"
+						block_heading="02. Выберите формат:"
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
@@ -15,7 +23,7 @@
 						tpl="/src/block/site/default/calc/card-format-mail.html"
 						block_prefix="calc-card__" 
 						block_mod="is--card  " 
-						block_heading="Выберите формат конверта:"
+						block_heading="03. Выберите формат конверта:"
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
@@ -23,7 +31,7 @@
 						tpl="/src/block/site/default/calc/card-orientation.html"
 						block_prefix="calc-card__" 
 						block_mod="is--card  "  
-						block_heading="Ориентация:"
+						block_heading="04. Ориентация:"
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
@@ -31,7 +39,7 @@
 						tpl="/src/block/site/default/calc/card-size.html"
 						block_prefix="calc-card__" 
 						block_mod="is--card  "  
-						block_heading="Выберите размер:" 
+						block_heading="05. Выберите размер:" 
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
@@ -39,7 +47,7 @@
 						tpl="/src/block/site/default/calc/card-calendar.html"
 						block_prefix="calc-card__" 
 						block_mod="is--card  "  
-						block_heading="Вид календаря:" 
+						block_heading="06. Вид календаря:" 
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
@@ -47,7 +55,7 @@
 						tpl="/src/block/site/default/calc/card-calendar-reklam.html"
 						block_prefix="calc-card__" 
 						block_mod="is--card  "  
-						block_heading="Тип квартального календаря:" 
+						block_heading="07. Тип квартального календаря:" 
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
@@ -55,7 +63,7 @@
 						tpl="/src/block/site/default/calc/card-paper.html"
 						block_prefix="calc-card__" 
 						block_mod="is--card    is--paper"  
-						block_heading="Тип бумаги:" 
+						block_heading="10. Тип бумаги:" 
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
@@ -63,7 +71,7 @@
 						tpl="/src/block/site/default/calc/card-treatment.html"
 						block_prefix="calc-card__" 
 						block_mod="is--card    is--treatment  is--checkbox"  
-						block_heading="Дополнительная обработка:" 
+						block_heading="11. Дополнительная обработка:" 
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
@@ -71,23 +79,15 @@
 						tpl="/src/block/site/default/calc/card-color.html"
 						block_prefix="calc-card__" 
 						block_mod="is--color"  
-						block_heading="Выберите цвет:" 
+						block_heading="12. Выберите цвет:" 
 					]]
 				</div>
 				<div class="{{block_prefix}}calc-cols cols  is--cols-12 azbn__calc__field">
 					[[azbntple 
 						tpl="/src/block/site/default/calc/range.html"
 						block_prefix="range-block__" 
-						block_heading="Количество:"
+						block_heading="13. Количество:"
 						block_range_id="inputRange"
-					]]
-				</div>
-				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
-					[[azbntple 
-						tpl="/src/block/site/default/calc/card-maket.html"
-						block_prefix="calc-card__" 
-						block_mod="is--card"  
-						block_heading="Нужен ли Вам индивидуальный дизайн?" 
 					]]
 				</div>
 			</div>
