@@ -230,6 +230,23 @@
 				color: @btn-bg-hover;
 			}
 		}
+		&.is--subscribe{
+			width: 100%;			
+			span{
+				border-color: @yellow;
+				background-color: @yellow;
+				font-size: @b-fs - 2;
+				&::before,
+				&::after{display: none;}
+			}
+			&:hover{
+				span{
+					border-color: @blue;
+					background-color: @blue;
+
+				}
+			}
+		}
 	}
 	&icon{
 		.btn-clearfix();

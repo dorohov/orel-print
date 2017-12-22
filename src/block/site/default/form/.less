@@ -31,6 +31,16 @@
 				margin-bottom: 3.3vw;
 			}
 		}
+		&.is--subscribe{ 
+			max-width: 305px;
+			margin: 0 auto;
+			@media @media-notsmart {
+				position: absolute;
+				width: 305px;
+				bottom: 71px;
+				right: 0px;
+			}
+		}
 	}
 	&row{
 		justify-content: center;
@@ -38,6 +48,9 @@
 		//@media @media-notsmart {
 			margin-top: -10px;
 		//} 
+		&.is--subscribe{
+			margin-top: -15px;
+		}
 	}
 	&inner{
 		&.is--inline{			
@@ -100,6 +113,12 @@
 					padding-top: 20px;
 					.makeCols(6, 12);
 				}
+			}
+		}
+		&.is--subscribe{
+			padding-top: 15px;
+			&.is--agreement{
+				text-align: left;
 			}
 		}
 	}
@@ -188,6 +207,22 @@
 		}
 		&.is--sm{
 			height: 40px;
+		}
+		&.is--subscribe{
+			background-color: @white;
+			border-width: 2px;
+			border-style: solid;
+			border-color: @b-form-i-border; 
+			padding: 5px 10px;
+			height: 36px;
+			font-size: @b-form-i-fs - 2;
+			line-height: @b-form-i-lh;		
+			&::-moz-placeholder{
+				font-size: @b-form-i-fs - 2;
+			}
+			&::-webkit-input-placeholder {
+				font-size: @b-form-i-fs - 2;
+			}
 		}
 	}
 	&btn{}
@@ -429,6 +464,13 @@ textarea.form__control.is--sm{
 		font-size: @b-fs - 6px; 
 		line-height: @b-lh - 10px;	
 	}
+	&.is--subscribe{
+		font-size: @b-fs - 6px; 
+		line-height: @b-lh - 10px;	
+		color: @white;
+		a{color: @white;}
+		max-width: 200px;
+	}
 }
 .rect-switch__{
 	&input[type="checkbox"]{
@@ -547,8 +589,8 @@ textarea.form__control.is--sm{
 
 .formError {
 	position: absolute;
-	top: 300px;
-	left: 300px;
+	top: 0px;
+	left: 0px;
 	display: block;
 	cursor: pointer;
 	text-align: left;

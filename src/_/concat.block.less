@@ -1492,6 +1492,23 @@
 				color: @btn-bg-hover;
 			}
 		}
+		&.is--subscribe{
+			width: 100%;			
+			span{
+				border-color: @yellow;
+				background-color: @yellow;
+				font-size: @b-fs - 2;
+				&::before,
+				&::after{display: none;}
+			}
+			&:hover{
+				span{
+					border-color: @blue;
+					background-color: @blue;
+
+				}
+			}
+		}
 	}
 	&icon{
 		.btn-clearfix();
@@ -3431,6 +3448,16 @@
 				margin-bottom: 3.3vw;
 			}
 		}
+		&.is--subscribe{ 
+			max-width: 305px;
+			margin: 0 auto;
+			@media @media-notsmart {
+				position: absolute;
+				width: 305px;
+				bottom: 71px;
+				right: 0px;
+			}
+		}
 	}
 	&row{
 		justify-content: center;
@@ -3438,6 +3465,9 @@
 		//@media @media-notsmart {
 			margin-top: -10px;
 		//} 
+		&.is--subscribe{
+			margin-top: -15px;
+		}
 	}
 	&inner{
 		&.is--inline{			
@@ -3500,6 +3530,12 @@
 					padding-top: 20px;
 					.makeCols(6, 12);
 				}
+			}
+		}
+		&.is--subscribe{
+			padding-top: 15px;
+			&.is--agreement{
+				text-align: left;
 			}
 		}
 	}
@@ -3588,6 +3624,22 @@
 		}
 		&.is--sm{
 			height: 40px;
+		}
+		&.is--subscribe{
+			background-color: @white;
+			border-width: 2px;
+			border-style: solid;
+			border-color: @b-form-i-border; 
+			padding: 5px 10px;
+			height: 36px;
+			font-size: @b-form-i-fs - 2;
+			line-height: @b-form-i-lh;		
+			&::-moz-placeholder{
+				font-size: @b-form-i-fs - 2;
+			}
+			&::-webkit-input-placeholder {
+				font-size: @b-form-i-fs - 2;
+			}
 		}
 	}
 	&btn{}
@@ -3829,6 +3881,13 @@ textarea.form__control.is--sm{
 		font-size: @b-fs - 6px; 
 		line-height: @b-lh - 10px;	
 	}
+	&.is--subscribe{
+		font-size: @b-fs - 6px; 
+		line-height: @b-lh - 10px;	
+		color: @white;
+		a{color: @white;}
+		max-width: 200px;
+	}
 }
 .rect-switch__{
 	&input[type="checkbox"]{
@@ -3947,8 +4006,8 @@ textarea.form__control.is--sm{
 
 .formError {
 	position: absolute;
-	top: 300px;
-	left: 300px;
+	top: 0px;
+	left: 0px;
 	display: block;
 	cursor: pointer;
 	text-align: left;
@@ -4650,17 +4709,30 @@ body.rtl .formError .formErrorArrow {
 
 .modal-base__{
 	&modal{
-		//display: block;
-		//opacity: 1;
-		//background: @black
+		&.is--action{
+			width: 100%;
+			//display: block;
+			//opacity: 1;
+			//background: @black;
+		}
 	}
 	&dialog {
 		//background: url('/img/maket/enter.jpg') no-repeat -718px -160px;
 		//height: 100%;
 		//overflow: auto;
-		&.is--enter{
+		&.is--action{
+			//background: url('/img/maket/action.jpg') no-repeat -640px -191px;
+			//height: 100%;
+			//overflow: auto;	
+			//left: 0!important;
+			overflow-x: hidden;
+			@media @media-size-xs {
+				height: 100%;
+				overflow-y: auto;
+			}
 			@media @media-notsmart {
-				 
+				width: 660px;
+				height: 640px;
 			}
 		}
 	}
@@ -4668,8 +4740,43 @@ body.rtl .formError .formErrorArrow {
 		//opacity: 0.7;
 		//background-color: @blue-light;
 		//overflow: hidden;
-		&.is--enter{			
-			@media @media-screen {
+		&.is--action{
+			//opacity: 0.7;
+			//background-color: @blue-light;
+			//overflow: hidden;
+			padding: 0;
+			background: none;
+			@media @media-notsmart {
+				width: 100%;
+				height: 100%;	
+				min-height: 100%;			
+			}
+		}
+	}
+	&bg{
+		&.is--action{
+			background-repeat: no-repeat;
+			background-position: left top;
+			padding: 0;
+			background-size: contain;
+			margin: 0 auto;
+			@media @media-size-xs {
+				width: 100vw;
+				height: 100vw;
+				max-width: 480px;
+				max-height: 480px;
+			}
+			@media @media-size-xs-l {
+				max-width: 300px;
+				max-height: 300px;
+			}
+			@media @media-notsmart {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				width: 100%;
+				height: 100%;					
 			}
 		}
 	}
@@ -4691,6 +4798,10 @@ body.rtl .formError .formErrorArrow {
 	&content{
 		position: relative; 
 		z-index: 2;
+		&.is--action{
+			width: 100%;
+			height: 100%;			
+		}
 	}
 	&tabs-nav{
 		list-style: none;

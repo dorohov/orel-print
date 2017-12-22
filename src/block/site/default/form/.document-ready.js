@@ -5,6 +5,7 @@ $(".form__control.is--ogrn").mask("9 99 99 99 99999 9",{placeholder:"С ГГ К�
 $(".form__block").validationEngine(
 	'attach', {
 		promptPosition : "bottomLeft",
-		scrollOffset: 200
+		scroll: false
+		//scrollOffset: 200
 	}
 );
