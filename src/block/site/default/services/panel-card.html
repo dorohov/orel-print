@@ -2,99 +2,119 @@
 	<div class="{{block_prefix}}row row  is--gutter  is--wrap">
 		<div class="{{block_prefix}}cols cols  is--cols-screen-7  is--cols-sm-12">
 			<div class="{{block_prefix}}text-block  text__block">
-				<h3>Способы доставки:</h3>
-				<ul class="is--styled"> 
-					<li>Самовывоз</li>
-					<li>Курьерская доставка по&nbsp;г. Орлу 300&nbsp;руб.</li>
-					<li>До&nbsp;транспортной компании 300 руб*.
-						<div class="{{block_prefix}}inner">
-							<div class="{{block_prefix}}inner-row  row  is--gitter  is--wrap">
-								<div class="{{block_prefix}}inner-cols cols  is--cols-3">
-									<div class="{{block_prefix}}inner-item">
-										<div class="{{block_prefix}}item-preview">
+				<h3 class="{{block_prefix}}delivery-heading">Способы доставки:</h3>
+				<div class="{{block_prefix}}delivery-card">
+					<div class="{{block_prefix}}delivery-inner">					
+						<div class="{{block_prefix}}delivery-preview">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="btn-icon-pickup" ]]
+						</div>					
+						<div class="{{block_prefix}}delivery-name">Самовывоз</div>				
+						<div class="{{block_prefix}}delivery-note">
+							Из офиса по адресу: г. Орел, Бульвар Победы 6, 4 этаж, офис 52.  С 9:00  до 18:00; Сб-Вс - выходной
+						</div>
+					</div>
+				</div>
+				<div class="{{block_prefix}}delivery-card">
+					<div class="{{block_prefix}}delivery-inner">					
+						<div class="{{block_prefix}}delivery-preview">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="btn-icon-courier" ]]
+						</div>					
+						<div class="{{block_prefix}}delivery-name">Курьерская доставка</div>				
+						<div class="{{block_prefix}}delivery-note">
+							Доставка по г. Орлу прямо в руки получателя. Стоимость доставки 300 руб.
+						</div>
+					</div>
+				</div>
+				<div class="{{block_prefix}}delivery-card">
+					<div class="{{block_prefix}}delivery-inner">					
+						<div class="{{block_prefix}}delivery-preview">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="btn-icon-transport" ]]
+						</div>					
+						<div class="{{block_prefix}}delivery-name">До транспортной компании 300 руб*.</div>				
+						<div class="{{block_prefix}}delivery-note">
+							*Стоимость доставки транспортной компанией считается отдельно и прибавляется к общей сумме.
+						</div>
+						<div class="{{block_prefix}}delivery-logo-panel">
+							<div class="{{block_prefix}}delivery-logo-row row  is--wrap  is--gutter15">
+								<div class="{{block_prefix}}delivery-logo-cols cols">
+									<div class="{{block_prefix}}delivery-logo">
+										<div class="{{block_prefix}}delivery-logo-preview">
 											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="transport-icon-dellin" ]]
+										</div>										
+										<div class="{{block_prefix}}delivery-logo-name">
+											Деловые линии 
 										</div>
-										<div class="{{block_prefix}}item-name">
-											Деловые линии
-										</div>
-									</div>
+									</div>	
 								</div>
-								<div class="{{block_prefix}}inner-cols cols  is--cols-3">
-									<div class="{{block_prefix}}inner-item">
-										<div class="{{block_prefix}}item-preview">
+								<div class="{{block_prefix}}delivery-logo-cols cols">
+									<div class="{{block_prefix}}delivery-logo">
+										<div class="{{block_prefix}}delivery-logo-preview">
 											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="transport-icon-pacom" ]]
-										</div>
-										<div class="{{block_prefix}}item-name">
+										</div>										
+										<div class="{{block_prefix}}delivery-logo-name">
 											ПЭК
 										</div>
-									</div>
+									</div>	
 								</div>
-								<div class="{{block_prefix}}inner-cols cols  is--cols-3">
-									<div class="{{block_prefix}}inner-item">
-										<div class="{{block_prefix}}item-preview">
+								<div class="{{block_prefix}}delivery-logo-cols cols">
+									<div class="{{block_prefix}}delivery-logo">
+										<div class="{{block_prefix}}delivery-logo-preview">
 											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="transport-icon-baikalsr" ]]
-										</div>
-										<div class="{{block_prefix}}item-name">
+										</div>										
+										<div class="{{block_prefix}}delivery-logo-name">
 											Байкал Сервис
 										</div>
-									</div>
+									</div>	
 								</div>
-								<div class="{{block_prefix}}inner-cols cols  is--cols-3">
-									<div class="{{block_prefix}}inner-item">
-										<div class="{{block_prefix}}item-preview">
+								<div class="{{block_prefix}}delivery-logo-cols cols">
+									<div class="{{block_prefix}}delivery-logo">
+										<div class="{{block_prefix}}delivery-logo-preview">
 											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="transport-icon-skif" ]]
+										</div>										
+										<div class="{{block_prefix}}delivery-logo-name">
+											СКИФКАРГО 
 										</div>
-										<div class="{{block_prefix}}item-name">
-											СКИФКАРГО
-										</div>
-									</div>
+									</div>	
 								</div>
 							</div>
 						</div>
-						<p><small>*Стоимость доставки транспортной компанией считается отдельно и&nbsp;прибавляется к&nbsp;общей сумме.</small></p>
-					</li>
-					<li>Постамат
-						<div class="{{block_prefix}}inner">
-							<div class="{{block_prefix}}inner-row  row  is--gitter  is--wrap">
-								<div class="{{block_prefix}}inner-cols cols  is--cols-3">
-									<div class="{{block_prefix}}inner-item">
-										<div class="{{block_prefix}}item-preview">
+					</div>
+				</div>
+				<div class="{{block_prefix}}delivery-card">
+					<div class="{{block_prefix}}delivery-inner">					
+						<div class="{{block_prefix}}delivery-preview">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="btn-icon-postomat" ]]
+						</div>					
+						<div class="{{block_prefix}}delivery-name">Постомат</div>				
+						<div class="{{block_prefix}}delivery-note">
+						</div>
+						<div class="{{block_prefix}}delivery-logo-panel">
+							<div class="{{block_prefix}}delivery-logo-row row  is--wrap  is--gutter15">
+								<div class="{{block_prefix}}delivery-logo-cols cols">
+									<div class="{{block_prefix}}delivery-logo">
+										<div class="{{block_prefix}}delivery-logo-preview">
 											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="postomat-icon-boxberry" ]]
-										</div>
-										<div class="{{block_prefix}}item-name">
+										</div>										
+										<div class="{{block_prefix}}delivery-logo-name">
 											Boxberry
 										</div>
-									</div>
+									</div>	
 								</div>
-								<div class="{{block_prefix}}inner-cols cols  is--cols-3">
-									<div class="{{block_prefix}}inner-item">
-										<div class="{{block_prefix}}item-preview">
+								<div class="{{block_prefix}}delivery-logo-cols cols">
+									<div class="{{block_prefix}}delivery-logo">
+										<div class="{{block_prefix}}delivery-logo-preview">
 											[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="postomat-icon-spsr" ]]
-										</div>
-										<div class="{{block_prefix}}item-name">
+										</div>										
+										<div class="{{block_prefix}}delivery-logo-name">
 											SPSR Express
 										</div>
-									</div>
+									</div>	
 								</div>
 							</div>
 						</div>
-					</li>
-				</ul>
-			
-				
-				<!--<h3>Фирменный стиль&nbsp;— это образ и&nbsp;имидж компании</h3>
-				<p>Он&nbsp;предполагает единое оформление различных корпоративных элементов с&nbsp;помощью гармоничного сочетания цвета, графики и&nbsp;шрифтов.</p>
-				<p>Фирменный стиль разрабатывается с&nbsp;целью формирования запоминающегося имиджа компании, образа ее&nbsp;продукции или оказываемых услуг.</p>
-				<p>Уникальный общий стиль формирует привлекательный облик бренда, способствует повышению его репутации и&nbsp;статуса.</p>
-				<p>При этом стиль должен быть ярко выражен, чтобы выделяться на&nbsp;фоне конкурентов.</p>
-				<h3>Что включает в&nbsp;себя фирменный стиль?</h3>
-				<ul> 
-					<li>Разработку логотипа;</li>
-					<li>Фирменную концепцию, графику, цвета и&nbsp;шрифт;</li>
-					<li>Разработку дизайна полиграфии: визитки, бланки, буклеты, листовки и&nbsp;тд;</li>
-					<li>Сувенирную и&nbsp;рекламную продукцию.</li>
-				</ul>-->
-			</div>		
+					</div>
+				</div>	
+			</div>
 		</div>
 	</div>
 	[[azbntple 

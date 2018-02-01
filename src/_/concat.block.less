@@ -2795,13 +2795,21 @@
 			}
 		}
 	}
+	&cost-block{
+		margin-bottom: 30px;	
+		@media @media-size-lg {
+			margin-bottom: 20px;
+		}
+	}
 	&cost{
 		color: @b-color-h;
 		font-weight: 500;
 		font-size: @b-fs - 2;
-		margin-bottom: 30px;	
-		@media @media-size-lg {
-			margin-bottom: 20px;
+		margin-bottom: 0px;
+		svg{display: block;}
+		&.is--xs{
+			font-weight: 400;
+			color: @b-color;
 		}
 		//@media @media-device-lg {padding: 0 10px;}
 		//@media @media-screen-lg {margin-bottom: 32px;}
@@ -2810,14 +2818,24 @@
 		color: @b-color-a;
 		font-weight: 700;
 		font-size: @b-fs + 6;
+		&.is--xs{
+			font-weight: 400;
+			font-size: @b-fs - 2;
+			color: @b-color;
+		}
 	}
 	&cost-ruble{
 		color: @b-color-a;
 		display: inline-block;
 		width: 11px;
 		height: 17px;
-		margin-left: 8px;		
-
+		margin-left: 8px;
+		&.is--xs{
+			color: @b-color;
+			width: 8px;
+			height: 12px;
+			margin-left: 4px;			
+		}
 	}
 	&basket{	
 		margin-bottom: 10px;
@@ -7087,6 +7105,101 @@ body.rtl .formError .formErrorArrow {
 	&item-name{
 		text-align: center;
 		color: @b-color-h
+	}
+	&delivery-heading{
+		.text__block &{
+			margin-bottom: 30px;
+			@media @media-screen {
+				margin-bottom: 2vw;
+			}
+		}
+	}
+	&delivery-card{
+		.text__block &{
+			margin-bottom: 30px;
+			@media @media-screen {
+				margin-bottom: 2.3vw;
+			}		
+		}		
+	}
+	&delivery-inner{
+		position: relative;
+		padding-left: 85px;
+		.text__block &{
+			margin-bottom: 0;
+		}
+	}
+	&delivery-preview{
+		position: absolute;
+		//top: 50%;
+		top: -6px;
+		left: 0;
+		//transform: translateY(-50%);
+		width: 64px;
+		height: 64px;
+		.text__block &{
+			margin-bottom: 0;
+		}
+	}
+	&delivery-name{
+		font-weight: 700;
+		color: @b-color-h;
+		.text__block &{
+			margin-bottom: 10px;
+		}
+	}
+	&delivery-note{
+		font-size: @b-fs - 2;
+		line-height: @b-lh - 4;
+		.text__block &{
+			margin-bottom: 0;
+		}
+	}
+	&delivery-logo-panel{
+		padding-top: 20px;
+		.text__block &{
+			margin-bottom: 0;
+		}
+	}
+	&delivery-logo{
+		position: relative;
+		padding-left: 50px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		.text__block &{
+			margin-bottom: 0;
+		}
+	}
+	&delivery-logo-row{		
+		.text__block &{
+			margin-bottom: 0;
+		}
+	}
+	&delivery-logo-cols{
+		@media @media-size-xs-p {
+			.makeCols(12, 12);
+		}
+		.text__block &{
+			margin-bottom: 0;
+		}
+	}
+	&delivery-logo-preview{
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		.text__block &{
+			margin-bottom: 0;
+		}
+	}
+	&delivery-logo-name{
+		font-size: @b-fs - 4;
+		color: @b-color-h;
+		.text__block &{
+			margin-bottom: 0;
+		}
 	}
 }
 .services-card__{
