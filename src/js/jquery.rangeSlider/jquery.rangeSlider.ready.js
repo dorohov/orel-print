@@ -32,23 +32,29 @@ $(function() {
 		from: parseInt($input.attr('value')),
 		onStart : function (data) {
 			
-			$input.prop('value', data.from);
+			var _res = data.from_value || data.from;
+			
+			$input.prop('value', _res);
 			
 			//azbn__sendChangeTrigger(data.from);
 			
 		},
 		onChange : function (data) {
 			
-			$input.prop('value', data.from);
+			var _res = data.from_value || data.from;
 			
-			//azbn__sendChangeTrigger(data.from);
+			$input.prop('value', _res);
+			
+			azbn__sendChangeTrigger(_res);
 			
 		},
 		onFinish : function (data) {
 			
-			$input.prop('value', data.from);
+			var _res = data.from_value || data.from;
 			
-			azbn__sendChangeTrigger(data.from);
+			$input.prop('value', _res);
+			
+			azbn__sendChangeTrigger(_res);
 			
 		},
 	});
