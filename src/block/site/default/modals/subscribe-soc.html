@@ -1,0 +1,44 @@
+<div class="modal fade {{modals_prefix}}modal  {{modals_mod}}" id="{{modals_id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog {{modals_prefix}}dialog  {{modals_mod}}">
+		<div class="modal-body {{modals_prefix}}body  {{modals_mod}}">
+			<button type="button" class="btn-site  {{modals_prefix}}close  modal-close" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
+			</button>
+			<div class="{{modals_prefix}}bg  {{modals_mod}}"  style="background-image: url({{modals_bg}});"></div>
+			<div class="modal-content {{modals_prefix}}content  {{modals_mod}}">
+				<div class="{{modals_prefix}}btn-group  {{modals_mod}}">
+					<div class="{{modals_prefix}}btn  {{modals_mod}}">	
+						[[azbntple 
+							tpl="/src/block/site/default/button/link-icon.html"
+							button_prefix="btn-soc__" 
+							button_mod="is--fb"
+							button_link="##" 
+							button_name="Подписаться в Facebook"
+							button_icon="fb"
+						]]
+					</div>
+					<div class="{{modals_prefix}}btn  {{modals_mod}}">	
+						[[azbntple 
+							tpl="/src/block/site/default/button/link-icon.html"
+							button_prefix="btn-soc__" 
+							button_mod="is--inst"
+							button_link="##" 
+							button_name="Подписаться в Instagram"
+							button_icon="inst"
+						]]
+					</div>
+					<div class="{{modals_prefix}}btn  {{modals_mod}}">	
+						[[azbntple 
+							tpl="/src/block/site/default/button/link-icon.html"
+							button_prefix="btn-soc__" 
+							button_mod="is--vk"
+							button_link="##" 
+							button_name="Получать уведомления"
+							button_icon="vk"
+						]]
+					</div>
+				</div>
+			</div> 
+		</div> 
+	</div>
+</div>

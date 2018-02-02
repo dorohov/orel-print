@@ -533,6 +533,46 @@
 		}
 	}
 }
+.btn-soc__{
+	&item{
+		display: block;
+		.btn-clearfix();
+		color: @white;
+		position: relative;
+		text-align: center;
+		padding: 6px 20px 6px 50px;
+		font-size: @b-fs - 2;
+		&:hover{
+			color: @white;
+		}
+		&.is--fb{
+			background-color: @color-fb;
+			&:hover{
+				background-color: @blue-dark;
+			}
+		}
+		&.is--inst{
+			background-color: #5f3184;
+			&:hover{
+				background-color: @blue-dark;
+			}
+		}
+		&.is--vk{
+			background-color: @color-vk;
+			&:hover{
+				background-color: @blue-dark;
+			}
+		}
+	}
+	&icon{
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+	}
+}
 @keyframes down {
 	0 {
 		opacity: 1;

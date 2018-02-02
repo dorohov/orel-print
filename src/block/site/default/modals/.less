@@ -149,7 +149,7 @@
 .modal-base__{
 	&modal{
 		&.is--action{
-			width: 100%;
+			//width: 100%;
 			//display: block;
 			//opacity: 1;
 			//background: @black;
@@ -160,7 +160,7 @@
 		//height: 100%;
 		//overflow: auto;
 		&.is--action{
-			//background: url('/img/maket/action.jpg') no-repeat -640px -191px;
+			//background: url('/img/maket/action3.jpg') no-repeat -640px -187px;
 			//height: 100%;
 			//overflow: auto;	
 			//left: 0!important;
@@ -293,7 +293,27 @@
 			display: block;
 		}
 	}
+	&btn-group{
+		&.is--action{ 
+			max-width: 305px;
+			margin: 20px auto 0;
+			padding: 0 10px;
+			@media @media-notsmart {
+				position: absolute;
+				width: 295px;
+				//bottom: 92px;
+				top: 367px;
+				right: 0px;
+				margin-top: 0;
+				padding: 0;
+			}
+		}
+	}
 	&btn{
+		&.is--action{
+			margin-bottom: 15px;
+		}
 		//margin-bottom: 10px;
 	}
+
 }

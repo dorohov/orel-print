@@ -1795,6 +1795,46 @@
 		}
 	}
 }
+.btn-soc__{
+	&item{
+		display: block;
+		.btn-clearfix();
+		color: @white;
+		position: relative;
+		text-align: center;
+		padding: 6px 20px 6px 50px;
+		font-size: @b-fs - 2;
+		&:hover{
+			color: @white;
+		}
+		&.is--fb{
+			background-color: @color-fb;
+			&:hover{
+				background-color: @blue-dark;
+			}
+		}
+		&.is--inst{
+			background-color: #5f3184;
+			&:hover{
+				background-color: @blue-dark;
+			}
+		}
+		&.is--vk{
+			background-color: @color-vk;
+			&:hover{
+				background-color: @blue-dark;
+			}
+		}
+	}
+	&icon{
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+	}
+}
 @keyframes down {
 	0 {
 		opacity: 1;
@@ -4741,7 +4781,7 @@ body.rtl .formError .formErrorArrow {
 .modal-base__{
 	&modal{
 		&.is--action{
-			width: 100%;
+			//width: 100%;
 			//display: block;
 			//opacity: 1;
 			//background: @black;
@@ -4752,7 +4792,7 @@ body.rtl .formError .formErrorArrow {
 		//height: 100%;
 		//overflow: auto;
 		&.is--action{
-			//background: url('/img/maket/action.jpg') no-repeat -640px -191px;
+			//background: url('/img/maket/action3.jpg') no-repeat -640px -187px;
 			//height: 100%;
 			//overflow: auto;	
 			//left: 0!important;
@@ -4885,9 +4925,29 @@ body.rtl .formError .formErrorArrow {
 			display: block;
 		}
 	}
+	&btn-group{
+		&.is--action{ 
+			max-width: 305px;
+			margin: 20px auto 0;
+			padding: 0 10px;
+			@media @media-notsmart {
+				position: absolute;
+				width: 295px;
+				//bottom: 92px;
+				top: 367px;
+				right: 0px;
+				margin-top: 0;
+				padding: 0;
+			}
+		}
+	}
 	&btn{
+		&.is--action{
+			margin-bottom: 15px;
+		}
 		//margin-bottom: 10px;
 	}
+
 }
 .navbar-site{ 
 	@media @media-device-lg{
