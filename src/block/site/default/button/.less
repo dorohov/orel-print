@@ -247,6 +247,17 @@
 				}
 			}
 		}
+		&[disabled]{
+			cursor: not-allowed;
+			//background-color: #e4e4e4!important;
+			&, &:focus, &:hover{
+				span{
+					background-color: #e4e4e4;
+					border-color: #c1c1c1;
+					color: @b-color;
+				} 
+			}
+		}
 	}
 	&icon{
 		.btn-clearfix();

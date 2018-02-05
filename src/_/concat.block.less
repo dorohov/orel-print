@@ -1509,6 +1509,17 @@
 				}
 			}
 		}
+		&[disabled]{
+			cursor: not-allowed;
+			//background-color: #e4e4e4!important;
+			&, &:focus, &:hover{
+				span{
+					background-color: #e4e4e4;
+					border-color: #c1c1c1;
+					color: @b-color;
+				} 
+			}
+		}
 	}
 	&icon{
 		.btn-clearfix();
@@ -2189,6 +2200,17 @@
 				.makeCols(12, 12);
 			}
 		}
+	}
+	&alert{
+		background-color: fadeout(@pink, 70%);
+		color: @b-color-h;
+		margin-bottom: 35px;
+		padding: 20px;
+		border-radius: 5px;
+		font-weight: 700;
+	    font-size: @b-fs - 6;
+	    letter-spacing: 1px;
+	    text-transform: uppercase;
 	} 
 } 
 .orders-card__{
