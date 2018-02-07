@@ -3547,6 +3547,7 @@
 				position: absolute;
 				width: 305px;
 				bottom: 71px;
+				bottom: 41px;
 				right: 0px;
 			}
 		}
@@ -3670,7 +3671,10 @@
 		width: 100%;
 		border-radius: 0px;
 		//text-align: center;
-		//letter-spacing: 0.2px;		
+		//letter-spacing: 0.2px;
+		html.safari &{
+			//-webkit-text-fill-color: transparent;
+		}
 		&::-moz-placeholder{
 			transition: @trs-site;
 			font-family: @b-form-i-ff;
@@ -3682,6 +3686,9 @@
 			font-family: @b-form-i-ff;
 			color: @b-form-i-plh-color;
 			font-size: @b-form-i-fs ;
+			html.safari &{
+				//-webkit-text-fill-color: transparent;
+			}
 		}
 		&:focus{ 	
 			border-color: @b-form-i-border-f;
@@ -4663,12 +4670,16 @@ body.rtl .formError .formErrorArrow {
 
 // Kill the scroll on the body
 .modal-open {
-	//overflow: hidden; 
+	//overflow: hidden!important;
+	html.safari &{
+		position: fixed;
+	}
 }
 .modal {
 	display: none;
 	overflow: hidden;
 	position: fixed;
+	//position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -4746,8 +4757,6 @@ body.rtl .formError .formErrorArrow {
 	height: 32px;
 	padding: 7px;
 	svg{
-		width: 14px;
-		height: 14px;
 		display: block;
 	} 	
 	@media @media-size-xs{
@@ -4807,6 +4816,13 @@ body.rtl .formError .formErrorArrow {
 			//display: block;
 			//opacity: 1;
 			//background: @black;
+			.modal-close{
+				@media @media-notsmart {	 
+					width: 52px;
+					height: 52px;
+					padding: 12px;
+				}
+			}
 		}
 	}
 	&dialog {
@@ -4825,7 +4841,7 @@ body.rtl .formError .formErrorArrow {
 			}
 			@media @media-notsmart {
 				width: 660px;
-				height: 640px;
+				height: 660px;
 			}
 		}
 	}
