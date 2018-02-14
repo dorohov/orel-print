@@ -2217,21 +2217,43 @@
 	&block{}
 	&heading{
 		&.is--delivery{
+			color: @b-color-a;
+			border-bottom: 2px solid @b-color-a;
+			padding-bottom: 5px;
 			@media @media-screen {
 				margin-bottom: 1.8vw;
+			}
+		}
+		&.is--input{
+			@media @media-screen {
+				margin-bottom: 1.2vw;
 			}
 		}
 	}
 	&row{
 		margin-bottom: 25px;
-		&.is--jcfe{
+		&.is--jcfe{  
 			@media @media-notsmart {
 				justify-content: flex-end;
 			}
 		}
 		&.is--jcsb{
 			justify-content: space-between;
-		}		
+		}	
+		&.is--input{
+			margin-bottom: 45px;
+			@media @media-screen {
+				margin-bottom: 4.5vw;
+			}
+		}	
+	}
+	&cols{
+		&.is--input{
+			.makeCols(12, 12);
+			@media @media-notsmart {
+				.makeCols(4, 12);
+			}
+		}
 	}
 	&text-block{
 		&.text__block{
@@ -2323,30 +2345,38 @@
 		padding-top: 15px;
 		padding-bottom: 15px;
 		&, &:focus, &:hover{color: @b-color;}
-		padding-left: 70px;
+		padding-left: 90px;
 		min-height: 50px;
+		border: 1px solid;
+		border-color: #e7e9f2;
+		border-radius: 5px;
 		@media @media-screen {
-			padding-left: 120px; 
-			min-height: 100px;
+			padding-left: 110px; 
+			min-height: 80px;
 		}	
 		&.is--transport{ 
 			min-height: 80px;
-			padding-left: 100px;
+			padding-left: 115px;
+		}
+		.orders-card__delivery-tabs-item.active &,
+		&:hover{
+			border-color: @b-color-a;
 		}
 	}
 	&delivery-tabs-icon{
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		left: 0px; 
+		left: 20px; 
 		svg{display: block;}
 		width: 50px;
 		height: 50px;
 		@media @media-screen {
-			width: 100px;
-			height: 100px;
+			width: 70px;
+			height: 70px;
 		}
 		&.is--transport{
+			left: 15px;
 			width: 80px;
 			height: 80px;
 		}
@@ -2355,15 +2385,15 @@
 		position: relative;
 		display: inline-block;
 		z-index: 1;
-		margin-bottom: 10px;
+		//margin-bottom: 10px;
 		font-size: @b-fs;
 		line-height: @b-lh - 8;
 		&, &:focus, &:hover{color: @b-color-h;}	
-		margin-bottom: 5px;
+		//margin-bottom: 5px;
 		.calcFontSize(16, 18, 320, 1680);
 		.calcLineHeight(16, 18, 320, 1680);
 		@media @media-screen {
-			margin-bottom: 10px;
+			//margin-bottom: 10px;
 		}	
 		&::before{
 			content: '';
@@ -2378,6 +2408,8 @@
 			transform: scale(0, 1);
 			transform-origin: right 0;
 		}
+
+		.orders-card__delivery-tabs-item:hover &,
 		.orders-card__delivery-tabs-item.active &,
 		&:hover{
 			&::before{
@@ -2393,6 +2425,7 @@
 		font-weight: 300;
 		font-size: @b-fs - 6;
 		line-height: @b-lh - 8;
+		display: none;
 	}
 	&delivery-tabs-radio{
 		width: 1px;
@@ -2414,6 +2447,7 @@
 	&delivery-pane-heading{
 		font-weight: 500;
 		margin-bottom: 5px;
+		color: @b-color-a;
 	}
 	&delivery-pane-note{
 		font-weight: 300;
