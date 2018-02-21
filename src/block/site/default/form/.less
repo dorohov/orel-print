@@ -147,12 +147,21 @@
 	}
 	&control{
 		background-color: fadeout(@b-form-i-bg, 100%);
-		border: 0;
+		/*
+		border: 0;		
 		border-bottom-width: 2px;   
 		border-bottom-style: solid;   
-		border-bottom-color: @b-form-i-border;   
-		height: 48px;
+		border-bottom-color: @b-form-i-border;
 		padding: 5px 0px;
+		border-radius: 0px;
+		*/ 
+		border-width: 2px;   
+		border-style: solid;   
+		border-color: @b-form-i-border;   
+		height: 48px;
+		padding: 5px 15px;
+		border-radius: 3px;
+		//
 		color: @black;
 		font-family: @b-form-i-ff;
 		font-size: @b-form-i-fs + 2;
@@ -160,7 +169,6 @@
 		color: @b-form-i-color;
 		transition: @trs-site;
 		width: 100%;
-		border-radius: 0px;
 		//text-align: center;
 		//letter-spacing: 0.2px;
 		html.safari &{
@@ -170,13 +178,13 @@
 			transition: @trs-site;
 			font-family: @b-form-i-ff;
 			color: @b-form-i-plh-color;
-			font-size: @b-form-i-fs ;
+			font-size: @b-form-i-fs - 2;
 		}
 		&::-webkit-input-placeholder {
 			transition: @trs-site;
 			font-family: @b-form-i-ff;
 			color: @b-form-i-plh-color;
-			font-size: @b-form-i-fs ;
+			font-size: @b-form-i-fs - 2;
 			html.safari &{
 				//-webkit-text-fill-color: transparent;
 			}
@@ -200,6 +208,19 @@
 				border-color: @b-color-h;
 				&::-moz-placeholder{color: @white;}
 				&::-webkit-input-placeholder {color: @white;}
+			} 
+		}
+		&.is--pale{
+			background-color: @blue-pale;
+			border-color: @blue-pale;
+			color: @b-color-h;
+			&::-moz-placeholder{color: @b-color-h;}
+			&::-webkit-input-placeholder {color: @b-color-h;}
+			&:focus{
+				border-color: @b-color-a;
+				background-color: @white;
+				&::-moz-placeholder{color: @b-color-h;}
+				&::-webkit-input-placeholder {color: @b-color-h;}
 			} 
 		}
 		&[readonly]{
@@ -262,6 +283,7 @@
 			}
 		}
 	}
+	//radio
 	&radio-block{		
 		position: relative;
 	}
@@ -317,15 +339,80 @@
 				opacity: 1;	
 				transform: scale(1) rotateZ(0deg);
 			}
-		}
-		
+		}		
 	}
 	&radio-text{
 		display: inline-block;
 		font-size: @b-fs - 2;
 		line-height: @b-lh - 8;
-
 	}
+	//end's radio
+	//checkbox
+	&checkbox-block{		
+		position: relative;
+		padding-left: 25px;
+	}
+	&checkbox-input{
+		visibility: hidden;
+		margin: 0;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		top: 70%;
+		transform: translateY(-50%);
+	}
+	&checkbox-switch{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 14px;
+		height: 14px;
+		border: 1px solid @b-form-i-bg;
+		border-radius: 50%;
+		transition: all .3s ease-in;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			transform: scale(3) rotateZ(-20deg);
+			transition: all .3s ease-in;
+			background: @b-form-i-bg;
+			opacity: 0;
+		}
+		&.is--pale{
+			background-color: @blue-pale;
+			border-color: @b-color-h;
+		}
+		.form__checkbox-input:checked + &{			
+			border-color: @b-form-i-border-f;
+			&::before{			
+				opacity: 1;	
+				transform: scale(1) rotateZ(0deg);
+			}
+			&.is--pale{		
+				border-color: @b-form-i-border-f;
+				box-shadow: 0px 0px 15px 0px fadeout(@b-color-a, 30%);
+				&::before{	
+					background-color: @b-form-i-border-f;
+				}
+			}
+		}		
+	}
+	&checkbox-text{
+		display: inline-block;
+		font-size: @b-fs - 2;
+		line-height: @b-lh - 8;
+		&.is--pale{
+			color: @b-color-h;
+		}
+	}
+	//end's radio
 	/*&panel{
 		&.is--panel{
 			background-color: @white7;

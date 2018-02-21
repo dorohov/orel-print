@@ -1,5 +1,8 @@
 .btn__{
 	&item{
+		@media print{
+			display: none;
+		}
 		.btn-clearfix();
 		display: inline-block; 	
 		color: @btn-color;
@@ -324,6 +327,9 @@
 }
 .btn-link__{
 	&item{
+		@media print{
+			display: none;
+		}
 		.btn-clearfix();
 		display: inline-block;
 		position: relative;

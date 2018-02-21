@@ -1,0 +1,285 @@
+<div class="{{block_prefix}}block  {{block_mod}}">
+	<form action="#" class="{{block_form}}block  {{block_prefix}}form  {{block_mod}}">
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<a href="/basket.html" class="{{block_prefix}}link-back  {{block_mod}}">
+				<div class="{{block_prefix}}link-back-icon  {{block_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-step-arrow" ]]</div>
+				Вернуться к корзине
+			</a>
+			<h1 class="{{block_prefix}}heading  {{block_mod}}">{{block_heading}}</h1>
+			<div class="{{block_prefix}}elem-heading-group  {{block_mod}}">
+				<h3 class="{{block_prefix}}elem-heading  {{block_mod}}">Заполните информацию о себе</h3>
+				<div class="{{block_prefix}}elem-heading-link  {{block_mod}}">У меня есть <a href="#" data-toggle="modal" data-target="#modal-enter">личный кабинет</a></div>
+			</div>
+			<div class="{{block_prefix}}row row  is--wrap  is--info">
+				<div class="{{block_prefix}}cols  cols  is--info">
+					<div class="{{block_form}}item  is--info">
+						<input type="text" class="{{block_form}}control  {{block_form_color}}  validate[required, custom[onlyLetterSp]]" name="f[name]" placeholder="Имя*">
+					</div>
+				</div>
+				<div class="{{block_prefix}}cols  cols  is--info">	
+					<div class="{{block_form}}item  is--info">		
+						<input type="email" class="{{block_form}}control  {{block_form_color}}  validate[required,custom[email]]" name="f[email]" placeholder="E-mail*">
+					</div>
+				</div>
+				<div class="{{block_prefix}}cols  cols  is--info">
+					<div class="{{block_form}}item  is--info">			
+						<input type="tel" class="{{block_form}}control  {{block_form_color}}  validate[required,custom[phone]]" name="f[tel]" placeholder="Телефон*">
+					</div>
+				</div>
+				<div class="{{block_prefix}}cols  cols  is--info  is--full">
+					<div class="{{block_form}}checkbox-block  is--info">
+		                <input class="{{block_form}}checkbox-input" id="f[reg]" name="f[reg]" type="checkbox" />
+		                <label for="f[reg]" class="{{block_form}}checkbox-switch  {{block_form_color}}"></label> 
+						<label for="f[reg]" class="{{block_form}}checkbox-text  {{block_form_color}}"> 
+							Запомнить меня и зарегистрироваться
+						</label>
+		            </div>
+				</div>
+			</div>
+			<div class="{{block_prefix}}tabs  is--info">
+				<div class="{{block_prefix}}tabs-pane  is--info">
+					<div class="{{block_prefix}}row row  is--wrap  is--info">
+						<div class="{{block_prefix}}cols  cols  is--info">
+							<div class="{{block_form}}item  is--info">			
+								<input type="password" class="{{block_form}}control  {{block_form_color}}  validate[required]" name="f[password]" placeholder="Пароль*">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}elem-heading-group  {{block_mod}}  is--lg">
+				<h3 class="{{block_prefix}}elem-heading  {{block_mod}}">Выберите способ доставки</h3>
+			</div>
+			<div class="{{block_prefix}}row row  is--wrap  is--delivery">
+				<div class="{{block_prefix}}cols  cols  is--delivery">			
+					[[azbntple 
+						tpl="/src/block/site/default/basket/card-delivery-tab.html"
+						block_prefix="{{block_prefix}}"
+						block_data="  "
+						block_mod="  "
+						block_heading="Курьером"
+						block_icon="btn-icon-courier"
+						block_input_group="del-method"
+						block_input_name="delivery-method"
+						block_input_id="delivery-method1"
+						block_input_warning="Выберите один из способов доставки"
+					]]
+				</div>
+				<div class="{{block_prefix}}cols  cols  is--delivery">			
+					[[azbntple 
+						tpl="/src/block/site/default/basket/card-delivery-tab.html"
+						block_prefix="{{block_prefix}}"
+						block_data="  "
+						block_mod="  "
+						block_heading="До транспортной компании"
+						block_icon="btn-icon-transport"
+						block_input_group="del-method"
+						block_input_name="delivery-method"
+						block_input_id="delivery-method2"
+						block_input_warning="Выберите один из способов доставки"
+					]]
+				</div>
+				<div class="{{block_prefix}}cols  cols  is--delivery">			
+					[[azbntple 
+						tpl="/src/block/site/default/basket/card-delivery-tab.html"
+						block_prefix="{{block_prefix}}"
+						block_data="  "
+						block_mod="  "
+						block_heading="Самовывоз"
+						block_icon="btn-icon-pickup"
+						block_input_group="del-method"
+						block_input_name="delivery-method"
+						block_input_id="delivery-method3"
+						block_input_warning="Выберите один из способов доставки"
+					]]
+				</div>
+			</div>
+			<div class="{{block_prefix}}tabs  is--delivery">
+				<div class="{{block_prefix}}tabs-pane  is--delivery">
+					<div class="{{block_prefix}}row row  is--wrap  is--address">
+						<div class="{{block_prefix}}cols  cols  is--address  is--col8">
+							<div class="{{block_form}}item  is--address">			
+								<input type="text" class="{{block_form}}control  {{block_form_color}}  validate[required]" name="f[address]" placeholder="Адрес доставки*">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="{{block_prefix}}tabs-pane  is--delivery">
+					<div class="{{block_prefix}}row row  is--gutter  is--wrap  is--transport">
+						<div class="{{block_prefix}}cols  cols  is--transport">
+							[[azbntple 
+								tpl="/src/block/site/default/basket/card-delivery-tab.html"
+								block_prefix="{{block_prefix}}"
+								block_data="  "
+								block_mod="is--transport"
+								block_heading="ПЭК"
+								block_icon="transport-icon-pacom"
+								block_input_group="transport-group"
+								block_input_name="transport"
+								block_input_id="transport-item1"
+								block_input_warning="Выберите одну из транспортных компаний"
+							]]
+						</div>
+						<div class="{{block_prefix}}cols  cols  is--transport">
+							[[azbntple 
+								tpl="/src/block/site/default/basket/card-delivery-tab.html"
+								block_prefix="{{block_prefix}}"
+								block_data="  "
+								block_mod="is--transport"
+								block_heading="Байкал Сервис"
+								block_icon="transport-icon-baikalsr"
+								block_input_group="transport-group"
+								block_input_name="transport"
+								block_input_id="transport-item2"
+								block_input_warning="Выберите одну из транспортных компаний"
+							]]
+						</div>
+						<div class="{{block_prefix}}cols  cols  is--transport">
+							[[azbntple 
+								tpl="/src/block/site/default/basket/card-delivery-tab.html"
+								block_prefix="{{block_prefix}}"
+								block_data="  "
+								block_mod="is--transport"
+								block_heading="Деловые линии"
+								block_icon="transport-icon-dellin"
+								block_input_group="transport-group"
+								block_input_name="transport"
+								block_input_id="transport-item3"
+								block_input_warning="Выберите одну из транспортных компаний"
+							]]
+						</div>
+						<div class="{{block_prefix}}cols  cols  is--transport">
+							[[azbntple 
+								tpl="/src/block/site/default/basket/card-delivery-tab.html"
+								block_prefix="{{block_prefix}}"
+								block_data="  "
+								block_mod="is--transport"
+								block_heading="СКИФКАРГО"
+								block_icon="transport-icon-skif"
+								block_input_group="transport-group"
+								block_input_name="transport"
+								block_input_id="transport-item4"
+								block_input_warning="Выберите одну из транспортных компаний"
+							]]
+						</div>
+						<div class="{{block_prefix}}cols  cols  is--transport">
+							[[azbntple 
+								tpl="/src/block/site/default/basket/card-delivery-tab.html"
+								block_prefix="{{block_prefix}}"
+								block_data="  "
+								block_mod="is--transport"
+								block_heading="Другая компания"
+								block_icon="transport-icon-other"
+								block_input_group="transport-group"
+								block_input_name="transport"
+								block_input_id="transport-item5"
+								block_input_warning="Выберите одну из транспортных компаний"
+							]]
+						</div>
+					</div>					
+					<div class="{{block_prefix}}tabs  is--delivery">
+						<div class="{{block_prefix}}tabs-pane  is--delivery  is--active">
+							<div class="{{block_prefix}}row row  is--wrap  is--address">
+								<div class="{{block_prefix}}cols  cols  is--address  is--col8">
+									<div class="{{block_form}}item  is--address">
+										<input type="text" class="{{block_form}}control  {{block_form_color}}  validate[required]" name="f[transport-other]" placeholder="Транспортная компания*">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="{{block_prefix}}tabs-pane  is--delivery">
+					<div class="{{block_prefix}}tabs-text">
+						<span>Пункт выдачи:</span> 302028, г. Орёл, ул. Бульвар Победы 6, 4 этаж, оф. 52
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}elem-heading-group  {{block_mod}}  is--lg">
+				<h3 class="{{block_prefix}}elem-heading  {{block_mod}}">Выберите способ оплаты</h3>
+			</div>
+			<div class="{{block_prefix}}row row  is--wrap  is--delivery">
+				<div class="{{block_prefix}}cols  cols  is--delivery">			
+					[[azbntple 
+						tpl="/src/block/site/default/basket/card-delivery-tab.html"
+						block_prefix="{{block_prefix}}"
+						block_data="  "
+						block_mod="  "
+						block_heading="Наличными"
+						block_icon="btn-icon-cash"
+						block_input_group="bay-method"
+						block_input_name="bay-method"
+						block_input_id="bay-method1"
+						block_input_warning="Выберите один из способов оплаты"
+					]]
+				</div>
+				<div class="{{block_prefix}}cols  cols  is--delivery">			
+					[[azbntple 
+						tpl="/src/block/site/default/basket/card-delivery-tab.html"
+						block_prefix="{{block_prefix}}"
+						block_data="  "
+						block_mod="  "
+						block_heading="На расчетный счет"
+						block_icon="btn-icon-checking"
+						block_input_group="bay-method"
+						block_input_name="bay-method"
+						block_input_id="bay-method2"
+						block_input_warning="Выберите один из способов оплаты"
+					]]
+				</div>
+				<div class="{{block_prefix}}cols  cols  is--delivery">			
+					[[azbntple 
+						tpl="/src/block/site/default/basket/card-delivery-tab.html"
+						block_prefix="{{block_prefix}}"
+						block_data="  "
+						block_mod="is--disabled"
+						block_heading="Оплата оnline"
+						block_icon="btn-icon-card"
+						block_input_group="bay-method"
+						block_input_name="bay-method"
+						block_input_id="bay-method3"
+						block_input_warning="Выберите один из способов оплаты"
+					]]
+				</div>
+			</div>
+			<div class="{{block_prefix}}tabs  is--delivery">
+				<div class="{{block_prefix}}tabs-pane  is--delivery">
+					[[azbntple 
+						tpl="/src/block/site/default/button/file-icon.html"
+						button_prefix="btn-link__" 
+						button_mod="is--icon  is--xs"
+						button_link="##"
+						button_name="Загрузить реквизиты"
+						button_icon="btn-icon-requisites"
+					]] 
+				</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}elem  {{block_mod}}">
+			<div class="{{block_prefix}}elem-heading-group  {{block_mod}}  is--lg">
+				<h3 class="{{block_prefix}}elem-heading  {{block_mod}}">Итого 5 товаров на сумму: <span class="{{block_prefix}}elem-heading-cost">30 523 <span class="{{block_prefix}}elem-heading-cost-ruble">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]</span></span></h3>				
+				<div class="{{block_prefix}}elem-heading-note  {{block_mod}}">
+					<p>Стоимость без учета скидки:  <s>33 102<span class="{{block_prefix}}elem-heading-note-ruble">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]</span></s></p>
+					<p>Стоимость заказа указана без учета доставки</p>
+				</div>
+			</div>
+			<div class="{{block_prefix}}btn  {{block_mod}}">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="is--bg"
+					button_type="submit"
+					button_attr="  "
+					button_name="Оформить заказ"
+				]]
+			</div>
+			<div class="{{block_prefix}}agreement  {{block_mod}}">
+				Подтверждая заказ я соглашаюсь с условиями <a href="/agreement.html">политики конфиденциальности</a>
+			</div>
+		</div>
+	</form>
+</div>
