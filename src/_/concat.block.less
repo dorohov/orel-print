@@ -2550,7 +2550,14 @@
 			color: @b-color-h;
 		}
 	}
-	&tabs{}
+	&tabs{
+		&.is--transport-company {
+			display:none;
+			&.is--active {
+				display:block;
+			}
+		}
+	}
 	&tabs-pane{
 		display: none;
 		margin-bottom:30px;
