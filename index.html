@@ -674,7 +674,7 @@
 </svg>
 		</a>
 	</div>
-	<div class="header-block__action-block">
+	<!--<div class="header-block__action-block">
 		<div class="row header-block__action-row  is--gutter  is--wrap  is--jcc is--aic"> 
 			<div class="cols header-block__action-cols  is--heading">
 				<div class="cols header-block__action-heading">Акции</div>
@@ -735,6 +735,13 @@
 				<a href="/action.html" {{button_attr}}  class="btn-link__item is--white"><span>Вcе акции</span></a>
 			</div>
 		</div>
+	</div>-->
+	<div class="header-block__banner-block">	 
+		<picture>
+			<source media="(min-width: 451px)" 
+					srcset="/img/temp/banner-index-1920x111.png">
+			<img src="/img/temp/banner-index-450x100.png" alt="">
+		</picture>	
 	</div>
 </div>
 		<div class="advantages-panel__block  is--index" id="index-advantages">	
@@ -1550,54 +1557,7 @@
 	</div>
 </div>
 		<!-- баннеры -->
-		<div class="modal fade modal-base__modal  is--action" id="modal-action" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-base__dialog  is--action">
-		<div class="modal-body modal-base__body  is--action">
-			<button type="button" class="btn-site  modal-base__close  modal-close" data-dismiss="modal" aria-hidden="true">
-				<svg class="icon-svg icon-modal-close" role="img">
-	<use xlink:href="/img/svg/sprite.svg#modal-close"></use>
-</svg>
-			</button>
-			<div class="modal-base__bg  is--action"  style="background-image: url(/img/temp/banner-sale.png);"></div>
-			<div class="modal-content modal-base__content  is--action">
-				<form action="#" class="form__block  is--subscribe"  >
-	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-	<div class="form__inner  is--subscribe"  >
-		<div class="row form__row  is--wrap">
-			<div class="cols form__cols  is--subscribe  is--name">
-				<div class="form__item is--subscribe">
-					<input type="text" class="form__control form-control validate[required, custom[onlyLetterSp]]  is--subscribe    " id="fa[name]" name="fa[Имя]" placeholder="Ваше имя">
-				</div>	
-			</div>
-			<div class="cols form__cols  is--subscribe  is--email">
-				<div class="form__item is--subscribe">
-					<input type="email" class="form__control form-control validate[required,custom[email]]  is--subscribe    " id="fa[email]" name="fa[E-mail]" placeholder="Ваш E-mail:">
-				</div>	
-			</div>
-			<div class="cols form__cols  is--subscribe  is--email">
-				<div class="form__item is--subscribe">
-					<input type="tel" class="form__control form-control validate[required,custom[phone]]  is--subscribe    " id="fa[phone]" name="fa[Телефон]" placeholder="Ваш телефон:">
-				</div>	
-			</div>
-			<div class="cols form__cols  is--subscribe  is--btn">
-				<button type="submit"  {{button_attr}} class="btn__item is--subscribe"><span>Подписаться</span></button>				
-			</div>
-			<div class="cols form__cols  is--subscribe  is--agreement">
-				<div class="rect-switch form__item      is--subscribe">
-	                <input class="rect-switch__input validate[required]      " id="fa[processing]" name="fa[processing]" type="checkbox" checked />
-	                <label for="fa[processing]" class="rect-switch__label        is--subscribe"></label> 
-					<label for="fa[processing]" class="rect-switch__text        is--subscribe"> 
-						Я согласен на обработку <a href="/agreement.html">персональных данных</a>
-					</label>
-	            </div>	
-			</div>
-		</div>	
-	</div> 
-</form> 
-			</div> 
-		</div> 
-	</div>
-</div>
+		
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
