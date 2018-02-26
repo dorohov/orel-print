@@ -618,6 +618,7 @@
 			background-color: @blue-pale;
 			transition: @trs-site;
 		}
+		&:hover,
 		.orders-panel__radio-input:checked + &{	
 			&::before{
 				background-color: @b-color-a;
@@ -625,6 +626,7 @@
 				box-shadow: 0px 0px 5px 1px fadeout(@b-color-a, 50%);
 			}
 		}
+		&.is--disabled:hover,
 		.orders-panel__radio-input.is--disabled:checked + &{	
 			&::before{
 				border-color: @b-color-h;
@@ -651,9 +653,11 @@
 			color: @b-color;
 			font-size: @b-fs - 4;
 		}
+		.orders-panel__radio-label:hover &,
 		.orders-panel__radio-input:checked + .orders-panel__radio-label &{
 			color: @b-color-a;
 		}
+		.orders-panel__radio-label.is--disabled:hover &,
 		.orders-panel__radio-input.is--disabled:checked + .orders-panel__radio-label &{
 			color: @b-color-h;
 		}
