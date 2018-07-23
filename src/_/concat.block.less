@@ -48,16 +48,26 @@
 		}
 		&.is--index{
 			@media @media-notsmart {
-				.makeCols(2.4, 12);
+				.makeCols(2, 12);
 			}
-			@media @media-size-sm-p {
+			@media @media-size-sm {
+				.makeCols(4, 12);
+			}
+			@media @media-size-md {
+				.makeCols(4, 12);
+			}
+			@media @media-size-lg {
 				.makeCols(4, 12);
 			}
 		}
 	}
 }
 .advantages-card__{
-	&item{	
+	&item{
+		@media @media-size-lg {
+			margin-bottom: 10px;
+		}
+
 
 	}	
 	&preview{
@@ -69,10 +79,10 @@
 		min-width: 110px;
 		min-height: 110px;
 		&.is--index{
-			max-width: 205px;
-			max-height: 205px;
-			width: 12vw;
-			height: 12vw;
+			max-width: 180px;
+			max-height: 180px;
+			width: 11vw;
+			height: 11vw;
 			min-width: 110px;
 			min-height: 110px;
 			margin-bottom: 15px;
@@ -89,8 +99,8 @@
 		&.is--index{
 			color: @b-color-a;
 			font-weight: 700;
-			.calcFontSize(18, 23, 320, 1680);
-			.calcLineHeight(20, 25, 320, 1680);
+			.calcFontSize(18, 19, 320, 1680);
+			.calcLineHeight(20, 21, 320, 1680);
 			margin-bottom: 10px;
 		}
 	}
