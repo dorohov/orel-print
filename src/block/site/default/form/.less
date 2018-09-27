@@ -42,6 +42,12 @@
 				right: 0px;
 			}
 		}
+		&.is--search{
+			margin-bottom: 40px;
+			@media @media-screen {
+				margin-bottom: 3.3vw;
+			}
+		}
 	}
 	&row{
 		justify-content: center;
@@ -51,6 +57,9 @@
 		//} 
 		&.is--subscribe{
 			margin-top: -15px;
+		}
+		&.is--search{
+			justify-content: flex-start;
 		}
 	}
 	&inner{
@@ -120,6 +129,18 @@
 			padding-top: 15px;
 			&.is--agreement{
 				text-align: left;
+			}
+		}
+		&.is--search{
+			@media @media-notsmart {
+				&.is--name{
+					.makeCols(8, 12);
+				}
+				&.is--btn{
+					text-align: left;
+					padding-top: 10px;
+					width: auto;
+				}
 			}
 		}
 	}

@@ -1,0 +1,39 @@
+.search-card__{
+	&item{
+		@media @media-size-xs-p {
+			margin-bottom: 20px;
+		}					
+	}
+	&note{
+	}
+	&category{
+		color: @white45;
+		margin-bottom: 5px;
+	}
+	&heading{
+		margin-bottom: 10px;
+		font-weight: 500;
+		.calcFontSize(20, 29, 320, 1680);
+		.calcLineHeight(26, 35, 320, 1680);
+		a{
+			&, &:focus, &:hover{
+				color: @b-color-h;
+			}
+			.blog-card__item:hover &{color: @b-color-a;}
+		}
+	}
+	&text-block{
+		.calcFontSize(16, 18, 320, 1680);
+		line-height: @b-lh - 4;
+		margin-bottom: 15px;
+		&.text__block{
+			p, div{
+				margin-bottom: 5px;
+			}
+		}
+	}
+	&btn{
+		//text-align: right;
+	}
+	
+}

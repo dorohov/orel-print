@@ -1,0 +1,69 @@
+<div class="content-block {{block_prefix}}content-block  is--hidden" role="main">	
+	<div class="page-header-panel__block  {{block_mod}}">
+		<div class="page-header-panel__container container">
+			[[azbntple 
+				tpl="/src/block/site/default/breadcrumb/level1.html" 
+				bread_prefix="breadcrumb__"
+				bread_mod="is--heading  is--blue  is--center"
+				level_1="{{block_heading}}" 
+			]]		
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/group.html" 
+				header_prefix="page-header__" 
+				header_mod="is--heading  is--blue  is--panel  is--center"
+				header_level="h1"
+				header="{{block_heading}}"
+				header_small_level="h3"
+				header_small="{{block_heading_small}}"
+			]]	
+		</div>
+		[[azbntple 
+			tpl="/src/block/site/default/bg/card-plane.html" 
+			block_prefix="bg-plane__"
+			block_mod="is--clients-left  is--speed-25"	
+			block_bg="bg-plane-clients-white.png"		
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/bg/card-plane.html" 
+			block_prefix="bg-plane__"
+			block_mod="is--clients-right  is--speed-10"	
+			block_bg="bg-plane-clients-blue.png"		
+		]]
+	</div>
+	<div class="container content-block__container {{block_prefix}}container  bg-header__container">
+		<div class="text__container">
+			[[azbntple 
+				tpl="/src/block/site/default/form/search.html" 
+				form_prefix="form__"
+				form_id="f_search"
+				form_mod="is--search" 
+				form_color="  "
+				form_note="  "
+				form_btn_name="Искать"
+				form_text="  " 
+			]]
+			<div class="{{block_prefix}}row row  is--gutter  is--wrap">
+				<div class="{{block_prefix}}cols cols  is--cols-12">
+					[[azbntple 
+						tpl="/src/block/site/default/search/card.html"
+						block_prefix="search-card__"
+						block_category="Услуга"
+						block_link="/blog-item.html"
+						block_heading="Айдентика во всём!"
+						block_note="<p>Айдентика — это набор графических форм, визуальная составляющая бренда, его фирменный стиль. Согласитесь, приятно иметь дело с компанией, которая соблюдает свой фирменный стиль во всех мелочах. Бланки, календарики, визитки, буклеты — всё подчиняется общей стилистике. Здесь вам обязательно предложат ручку с фирменным логотипом или визитку. Такие знаки внимания всегда приятны.</p>"
+					]]
+				</div>
+				<div class="{{block_prefix}}cols cols  is--cols-12">
+					[[azbntple 
+						tpl="/src/block/site/default/search/card.html"
+						block_prefix="search-card__"
+						block_category="Услуга"
+						block_link="/blog-item.html"
+						block_heading="Айдентика во всём!"
+						block_note="<p>Айдентика — это набор графических форм, визуальная составляющая бренда, его фирменный стиль. Согласитесь, приятно иметь дело с компанией, которая соблюдает свой фирменный стиль во всех мелочах. Бланки, календарики, визитки, буклеты — всё подчиняется общей стилистике. Здесь вам обязательно предложат ручку с фирменным логотипом или визитку. Такие знаки внимания всегда приятны.</p>"
+					]]
+				</div>
+			</div>
+		</div>	
+	</div>	
+</div>
